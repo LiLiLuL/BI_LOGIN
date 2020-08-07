@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../static/lib/jqueryFytxTips/Fytx_Tips.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <title>分类信息修改页面</title>
+    </head>
+    <body>
+        <div>
+            <ul class="nav">
+                <li><a href="../operation.html">首页</a><span class="arrow">&gt;</span></li>
+                <li><a href="../operation.html">分类属性管理</a><span class="arrow">&gt;</span></li>
+                <li><a href="" id="title" >修改分类属性</a></li>
+            </ul>
+        </div>
+        <div class="editor">
+            <button id="edit" type="button">编辑</button>
+            <button id="delete" type="button">删除</button>
+        </div>
+        <div class="details">
+            <form id="parameter-change-form">
+                <p>
+                    <span class="label">属性编码:</span>
+                    <input type="text" name="parameter_Code" id="parameter_Code"  class="unable_edit" readonly/>
+                    <span class="label">属性名称:</span>
+                    <input type="text" name="parameter_Name" id="parameter_Name" class="unable_edit" readonly />
+                    <input type="text" name="id" id="cate_id" style="display: none;" />
+                </p>
+                <p>
+                    <span class="label">属性描述:</span>
+                    <input type="text" name="parameter_Description" id="parameter_Des"  class="unable_edit" readonly/>
+
+                </p>
+                
+    
+                <p class="button">
+                    <button id="cancel" type="button" class="btn-default">取 消</button>
+                    <button type="button" id="submit" class="btn-blue">提 交</button>
+                </p>
+        
+            </form>
+            </div>
+    </body>
+    <script src="../static/lib/jquery/1.8/jquery.min.js"></script>
+    <script src="../static/lib/jqueryFytxTips/Fytx_Tips_Config.js"></script>
+    <script src="../static/lib/jqueryFytxTips/Fytx_Tips.js"></script>
+    <script src="../js/util.js"></script>
+    <script>
+        let code=getUrlParam("id");
+        $(document).ready(function(){
+            let urlGet="/server/admin/findCateInfo?code="+code;
+            $.ajax({
+                type:"get",
+                url:urlGet,
+                success:function(res){
+                    let data=res.data[0];
+                    $("#parameter_Code").val(data.parameter_Code);
+                    $("#parameter_Name").val(data.parameter_Name);
+                    $("#parameter_Des").val(data.parameter_Description);
+                    $("#cate_id").val(data.id);
+                }
+            })
+            
+    
+    
+        })
+        $("#delete").click(function(){
+            let urlGet="/server/admin/deleteCateInfo?code="+code;
+            $.ajax({
+                type:"get",
+                url:urlGet,
+                success:function(res){
+                    if(res.code==1){
+                        $.confirm("提示信息","确定要删除？","删除成功！");
+                        $.isok=function(ok){
+                            alert(ok);
+                            window.location.href="../operation.html"
+
+                        }
+                    }
+                }
+            })
+        })
+        
+        $("#edit").click(function(){
+            $("input").removeAttr("readonly");
+            $("input").addClass("edit_able");
+            
+        })
+        $("#cancel").click(function(){
+            $("input").attr("readonly",true);
+            $("input").removeClass("edit_able");
+        })
+        $("#submit").click(function(){
+            let modal={};
+            modal.record_Date = getNowDate();
+            modal.oper_Sign = sessionStorage.userCode;
+            modal.history_Code=getUrlParam("id");
+            let formAtrr = $("#parameter-change-form").serializeArray();
+            $.each(formAtrr, function (i, field) {
+                modal[field.name] = field.value;
+            });
+            $.ajax({
+                type:"post",
+                url:"/server/admin/updateCateInfo",
+                dataType:"json",
+                contentType: "application/json;charset=UTF-8",
+                data:JSON.stringify(modal),
+                success:function(res){
+                    if(res.code==1){
+                      $.toast("修改分类信息成功", 3, true);
+                      window.location.href="../operation.html"
+    
+                    }else if(res.code==2){
+                        alert("该分类编码已存在，请重新填写！");
+                    }
+    
+                }
+            })
+    
+        })
+    
+    
+    </script>
+</body>
+</html>

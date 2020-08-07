@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--避免生成重复代码的插件-->
+   <!--<plugin type="com.chenxq.FReport.Util.OverIsMergeablePlugin"/>  --> 
+
+        <!--是否在代码中显示注释-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.100.151.63:3306/tianma_bi?characterEncoding=UTF-8" userId="bi"
+                        password="Root123!">
+        </jdbcConnection>
+
+        <!--生成pojo类(实体类）存放位置-->
+        <javaModelGenerator targetPackage="com.tianma.BI_Process.Domain" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成xml映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成mapper类存放位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tianma.BI_Process.Repository" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+
+        <!--生成对应表及类名-->
+        <table tableName="SYS_BP_Approval_Node_Dim" 
+               domainObjectName="ApprovalNodeDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+         <table tableName="SYS_BP_User_Dim" 
+               domainObjectName="UserDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="Id" sqlStatement="JDBC"/>
+        </table>
+         <table tableName="SYS_BP_Org_Dim" 
+               domainObjectName="OrgDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="Id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="SYS_BP_Org_Admin_Dim" 
+               domainObjectName="OrgAdminDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="Id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="SYS_BP_Approval_Dim" 
+               domainObjectName="ApprovalDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="Id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="SYS_BP_Approval_Case_Fact" 
+               domainObjectName="ApprovalCaseFact" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        
+        <table tableName="SYS_BP_Approval_Case_Record_Fact" 
+               domainObjectName="ApprovalCaseRecordFact" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="SYS_BP_Menu_Dim" 
+               domainObjectName="MenuDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="SYS_BP_Menu_Admin_Dim" 
+               domainObjectName="MenuAdminDim" 
+               enableCountByExample="false"
+               enableUpdateByExample="false" 
+               enableDeleteByExample="false" 
+               enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <!--使用自增长键-->
+            <property name="my.isgen.usekeys" value="true"/>
+            <!--使用数据库中实际的字段名作为生成的实体类的属性-->
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+    </context>
+</generatorConfiguration>
+

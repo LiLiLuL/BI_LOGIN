@@ -1,0 +1,150 @@
+input{
+    outline: none;
+    border:none;
+    outline-color:transparent;
+}
+.details{
+    width:80%;
+    margin: auto;
+    border:1px solid #000;
+    border-radius: 5px;
+    padding:20px;
+    margin-top:20px;
+}
+.label{
+    color: #1C4C74;
+    font-size:16px;
+    font-weight:bold;
+}
+input.unable_edit{
+    border:none;
+    font-size:14px;
+    color:#000;
+    background-color: transparent;
+    min-width:240px;
+    margin:5px;
+}
+
+.button{
+    text-align: center;
+    font-size:16px;
+    font-weight:900;
+    margin-top:120px;
+
+}
+.button button{
+    display: inline-block;
+    border-style: solid;
+	padding: 6px 10px;
+    border-width: 1px;
+    border-color: #FFF;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 111;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
+    width:100px;
+    height:40px;
+    font-size:16px;
+    font-weight:900;
+}
+.btn-blue{
+    color: #fff!important;
+    background-color:  #0E85C3!important;
+    border-color: #0E85C3;
+}
+
+.btn-default{
+    background-color: #8b9aa3!important;
+    border-color: #abbac3;
+	color: #fff;
+}
+
+textarea{
+    width:80%;
+    height:200px;
+    margin-block-end: -100px;
+    border:1px solid #8b9aa3;
+}
+select{
+    width:120px;
+    border:1px solid #8b9aa3;
+    margin-left:3px;
+    
+}
+.checked-list li{
+    display: inline-block;
+    margin-right:10px;
+    font-size: 14px;
+
+}
+.checked-list{
+    display: inline-block;
+}
+.table_striped thead tr th{
+    background-color: rgba(233, 217, 217, 0.781);
+    color:#000;
+    border:1px solid #8b9aa3;
+}
+
+
+.table_striped tbody tr:nth-child(even){
+    background:rgba(245, 232, 232, 0.781);
+
+}
+.table_striped tbody tr td,.table-bordered{
+    border:1px solid#8b9aa3;
+}
+.mytable{
+    margin-bottom: 20px;
+}
+.nav{
+    font-size: 16px;
+    font-weight:900;
+    
+}
+.nav li{
+    display: inline-block;
+}
+.arrow{
+    margin-left:5px;
+}
+.nav a{
+    color:#1C4C74;
+}
+.border-css{
+    border:1px solid #1C4C74;
+}
+.editor{
+    text-align: right;
+    width:90%;
+}
+.editor button{
+    border:1px solid #1C4C74;
+    margin-right:10px;
+    font-size:14px;
+    padding: 10px;
+    width:100px;
+    border-radius: 5px;
+    font-weight:bold;
+    color:#fff;
+}
+#edit{
+    background-color: orange;
+}
+#delete{
+    background-color: red;
+}
+.edit_able{
+    border:1px solid #1C4C74 !important;
+    height: 26px;
+}

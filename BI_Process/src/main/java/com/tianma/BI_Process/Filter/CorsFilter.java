@@ -1,0 +1,54 @@
+package com.tianma.BI_Process.Filter;
+
+
+import javax.servlet.FilterConfig;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+import javax.servlet.*;
+
+import org.springframework.stereotype.Component;
+
+//服务器配置允许跨域
+@Component
+public class CorsFilter  implements Filter{
+	
+	@Override
+	public  void init(FilterConfig  filterConfig)  throws ServletException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,FilterChain filterChain) throws IOException,ServletException{
+		HttpServletResponse response=(HttpServletResponse) servletResponse;
+		HttpServletRequest request=(HttpServletRequest) servletRequest;
+		System.out.println(request.getCharacterEncoding());
+		request.setCharacterEncoding("UTF-8");
+		String origin=request.getHeader("Origin");
+		   response.setHeader("Access-Control-Allow-Origin", origin);
+	        response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+	        response.setHeader("Access-Control-Max-Age", "3600");
+	        response.setHeader("Access-Control-Allow-Headers", "x-requested-with,Authorization");
+	        response.setHeader("Access-Control-Allow-Credentials", "true");
+	        response.setHeader("Access-Control-Allow-Headers", "Content-Type,XFILENAME,XFILECATEGORY,XFILESIZE");
+	        String method = request.getMethod();
+	        System.out.println("*********************************过滤器被使用**************************");  
+	        if(method.equalsIgnoreCase("OPTIONS")){
+	            servletResponse.getOutputStream().write("Success".getBytes("utf-8"));
+//	          response.setStatus(HttpStatus.OK);
+//	            
+//				// hresp.setContentLength(0);
+//	 
+//				response.getWriter().write("OPTIONS returns OK");
+
+	        }else{
+	            filterChain.doFilter(servletRequest, servletResponse);
+	        }
+	        
+	}
+	 @Override
+	    public void destroy() {
+	 
+	    }
+
+}

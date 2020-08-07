@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/iconfont.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/datatables.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <title>管理员配置页面</title>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="../operation.html">首页</a><span class="arrow">&gt;</span></li>
+        <li><a href="" id="title" >管理员分配</a></li>
+        <li><button id="submit">确定</button></li>
+    </ul>
+    <div class="up">
+        <p>选择管理人员</p>
+        <table id="userInfo">
+            <thead>
+                <tr>
+                    <th>用户工号</th>
+                    <th>用户名</th>
+                    <th>部门</th>
+                    <th>邮箱</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="content_box">
+        <div class="primary">
+            <div class="primary">
+                <div class="operation">
+                    <button id="add_result">添加</button>
+                    <button id="delete_result">删除</button>
+                </div>
+            </div>
+            <div class="secondary">
+               <p calss="title">已有属性（权限）列表</p>
+               <ul id="selected_parameter"></ul>
+            </div>
+        </div>
+        <div class="secondary">
+            <p calss="title">属性（权限）列表</p>
+            <ul id="parameters"></ul>
+        </div>
+    </div>
+</body>
+<script src="../static/lib/jquery/1.8/jquery.min.js"></script>
+<script src="../js/datatables.js"></script>
+<script src="../js/util.js"></script>
+<script>
+    //获取所有的parameter数据
+    $.ajax({
+        url:'/server/admin/findAllParameters',
+        type:'get',
+        success:function(res){
+            console.log(res.data);
+            let data=res.data;
+            if(data==null){
+                $("#parameters").append("<li>暂无任何分类属性</li>")
+            }else{
+                data.map(item=>{
+                    $("#parameters").append("<li data-id="+item.parameter_Code+" data-code="+item.category_Code+">"+
+                        "<i class='iconfont icon-icon-test2'></i>"+item.parameter_Name+"</li>");
+                })
+
+            }
+           
+
+        }
+    })
+    let allParameters=[];
+    let selectedParameters=[];
+    let deleteParameters=[];
+    let flag=false;
+    let admin_Code;
+    $("#parameters").on("click","li",function(){
+        let id=$(this).attr("data-id");
+        let item={};
+        item.parameter_Code=id;
+        item.parameter_Name=$(this).text(); 
+        item.category_Code=$(this).attr("data-code");
+        item.user_Code=admin_Code;
+        item.create_User=sessionStorage.userCode;
+        item.create_Date=getNowDate();
+        if ($(this).find('i').hasClass('icon-fuxuankuang1')) {
+                $(this).find('i').removeClass('icon-fuxuankuang1');
+                $(this).find('i').addClass('icon-icon-test2');
+                for(let i=0;i<selectedParameters.length;i++){
+                    if(selectedParameters[i].parameter_Code==id){
+                        selectedParameters.splice(i,1)
+
+                    }
+                }
+
+            }else {
+                $(this).find('i').removeClass('icon-icon-test2');
+                $(this).find('i').addClass('icon-fuxuankuang1');
+                selectedParameters.push(item);
+        }
+    })
+    $("#selected_parameter").on("click","li",function(){ 
+        let id=$(this).attr("data-id");
+        let item={};
+        item.parameter_Code=id;
+        if ($(this).find('i').hasClass('icon-fuxuankuang1')) {
+                $(this).find('i').removeClass('icon-fuxuankuang1');
+                $(this).find('i').addClass('icon-icon-test2');
+                for(let i=0;i<deleteParameters.length;i++){
+                    if(deleteParameters[i].parameter_Code==id){
+                        deleteParameters.splice(i,1)
+
+                    }
+                }
+            }
+            else {
+                $(this).find('i').removeClass('icon-icon-test2');
+                $(this).find('i').addClass('icon-fuxuankuang1');
+                deleteParameters.push(item);
+            }
+    })
+    $("#add_result").click(function(){
+        if(selectedParameters.length==0){
+            alert("请先选择需要添加的权限");
+        }else if(! flag){
+            alert("请先选择用户！")
+
+        }else{
+            $("#selected_parameter").empty();
+            selectedParameters.map(item=>{
+                $("#selected_parameter").append("<li data-id="+item.parameter_Code+">"+
+                        "<i class='iconfont icon-icon-test2'></i>"+item.parameter_Name+"</li>");
+            })
+        }
+    })
+    $("#delete_result").click(function(){
+        if(deleteParameters.length==0){
+            alert("请先选择需要添加的权限");
+        }else if(! flag){
+            alert("请先选择用户！")
+
+        }else{
+            deleteParameters.map(item=>{
+                let cur=$("#selected_parameter li[data-id="+item.parameter_Code+"]");
+                cur.remove();
+                for(let i=0;i<selectedParameters.length;i++){
+                    if(selectedParameters[i].parameter_Code==item.parameter_Code){
+                        selectedParameters.splice(i,1)
+
+                    }
+                }
+            })
+        }
+    })
+    $("#submit").click(function(){
+        console.log(selectedParameters);
+        if(selectedParameters.length==0){
+            alert("请添加或删除相关的权限！");
+        }else{
+            $.ajax({
+            type:'post',
+            data:JSON.stringify({"cateArray":selectedParameters}),
+            contentType: "application/json;charset=UTF-8",
+            url:'/server/admin/updateCateAdmins',
+            success:function(res){
+               console.log(res.data);
+            }
+        })
+
+        }
+    })
+    $(document).ready(function () {
+        let user_table = $("#userInfo").DataTable({
+            paging: true,
+
+            "ajax": "/server/user/selectAllUser",
+            "columns": [
+                { "data": "user_Code" },
+                { "data": "user_Name" },
+                { "data": "dept" },
+                { "data": "email" },
+                { "data": "phone_Number" },
+            ],
+            initComplete: function () {
+                this.api().columns().every(function () {
+                    let column = this;
+                    let select = $('<select><option value=""></option></select>')
+                        .appendTo($(column.footer()).empty())
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
+
+                            column
+                                .search(val ? '^' + val + '$' : '', true, false)
+                                .draw();
+                        });
+
+                    column.data().unique().sort().each(function (d, j) {
+                        select.append('<option value="' + d + '">' + d + '</option>')
+                    });
+                });
+            }
+        })
+        //选中行数据
+        $('#userInfo tbody').on('click', 'tr', function () {
+            $("#parameters").find('i').removeClass('icon-fuxuankuang1');
+            $("#parameters").find('i').addClass('icon-icon-test2');
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                flag=false;
+            }else {
+                user_table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+                flag=true;
+                selectedParameters=[];
+            }
+            if( $("#selected_parameter").children().length>0){
+                $("#selected_parameter").empty();
+            }
+           
+            search_data = user_table.rows('.selected').data()[0];
+            let code=search_data.user_Code;
+            admin_Code=code;
+
+            $.ajax({
+                type:'get',
+                url:'/server/admin/findCateAdminByUser?userCode='+code,
+                async:false,
+                success:function(res){
+                    let data=res.data;
+                    if(res.code==-1){
+                        $("#selected_parameter").append("<li>null</li>");
+                    }else if(res.code==1){
+                        
+                        data.map(item=>{
+                            $("#selected_parameter").append("<li data-id="+item.parameter_Code+">"+
+                             "<i class='iconfont icon-icon-test2'></i>"+item.parameter_Name+"</li>");
+                           selectedParameters.push(item);
+                           let cur=$("#parameters li[data-id="+item.parameter_Code+"]");
+                           cur.find('i').removeClass('icon-icon-test2');
+                           cur.find('i').addClass('icon-fuxuankuang1');     
+                        })
+                    }
+
+
+                }
+            })
+        });
+
+    })
+</script>
+
+</html>

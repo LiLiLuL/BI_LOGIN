@@ -1,0 +1,842 @@
+2020-06-08 15:21:54.032  INFO 12712 --- [main] com.tianma.BI_Process.TestApp            : Starting TestApp on SH-B1893421 with PID 12712 (started by Administrator in F:\BI\BI_ACL\Src\BI_Process)
+2020-06-08 15:21:54.045  INFO 12712 --- [main] com.tianma.BI_Process.TestApp            : No active profile set, falling back to default profiles: default
+2020-06-08 15:21:54.148  INFO 12712 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6d60fe40: startup date [Mon Jun 08 15:21:54 CST 2020]; root of context hierarchy
+2020-06-08 15:21:55.470 ERROR 12712 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 15:21:55.499  INFO 12712 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6d60fe40: startup date [Mon Jun 08 15:21:54 CST 2020]; root of context hierarchy
+2020-06-08 15:21:55.502 ERROR 12712 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7c7a06ec] to prepare test instance [com.tianma.BI_Process.TestApp@2c43eb8]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 15:36:51.688  INFO 14104 --- [main] com.tianma.BI_Process.TestApp            : Starting TestApp on SH-B1893421 with PID 14104 (started by Administrator in F:\BI\BI_ACL\Src\BI_Process)
+2020-06-08 15:36:51.690  INFO 14104 --- [main] com.tianma.BI_Process.TestApp            : No active profile set, falling back to default profiles: default
+2020-06-08 15:36:51.721  INFO 14104 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Mon Jun 08 15:36:51 CST 2020]; root of context hierarchy
+2020-06-08 15:36:52.921 ERROR 14104 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 15:36:52.923  INFO 14104 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Mon Jun 08 15:36:51 CST 2020]; root of context hierarchy
+2020-06-08 15:36:52.926 ERROR 14104 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6b2ea799] to prepare test instance [com.tianma.BI_Process.TestApp@5411dd90]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 16:18:03.858  INFO 5976 --- [main] com.tianma.BI_Process.TestApp            : Starting TestApp on SH-B1893421 with PID 5976 (started by Administrator in F:\BI\BI_ACL\Src\BI_Process)
+2020-06-08 16:18:03.859  INFO 5976 --- [main] com.tianma.BI_Process.TestApp            : No active profile set, falling back to default profiles: default
+2020-06-08 16:18:03.893  INFO 5976 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@792b749c: startup date [Mon Jun 08 16:18:03 CST 2020]; root of context hierarchy
+2020-06-08 16:18:05.258  INFO 5976 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2b8cc6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-08 16:18:06.174  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2020-06-08 16:18:06.182  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2020-06-08 16:18:06.530  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.getInfo(java.lang.Integer)
+2020-06-08 16:18:06.531  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findbyId],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findOrgById(java.lang.Integer)
+2020-06-08 16:18:06.532  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/openorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.openOrg(java.lang.Integer)
+2020-06-08 16:18:06.532  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addOrg(com.tianma.BI_Process.Domain.OrgDim)
+2020-06-08 16:18:06.532  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findAllorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findAllOrg()
+2020-06-08 16:18:06.533  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findNodesbyId],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findNodesById(java.lang.Integer)
+2020-06-08 16:18:06.534  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/delorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.delOrg(java.lang.Integer)
+2020-06-08 16:18:06.534  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/updateorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.updateOrg(com.tianma.BI_Process.Domain.OrgDim)
+2020-06-08 16:18:06.534  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findorg],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findOrg(java.lang.String)
+2020-06-08 16:18:06.535  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addcase],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addCase(com.tianma.BI_Process.Domain.UserFormInfo)
+2020-06-08 16:18:06.536  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addApproval],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addApproval(com.tianma.BI_Process.Dto.ApprovalInfo)
+2020-06-08 16:18:06.538  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getInfos],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.getInfos(java.lang.String)
+2020-06-08 16:18:06.538  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getallapp],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.getAllApproval()
+2020-06-08 16:18:06.539  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/postApproval],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.postApproval(com.tianma.BI_Process.Dto.ApprovalInformation)
+2020-06-08 16:18:06.539  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/userLock],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.userLock(java.lang.String,java.lang.String)
+2020-06-08 16:18:06.540  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/updateCateInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.updateCateInfo(com.tianma.BI_Process.Dto.categoryUpdate)
+2020-06-08 16:18:06.541  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdmin(java.lang.String,java.lang.String)
+2020-06-08 16:18:06.541  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateInfo(java.lang.String)
+2020-06-08 16:18:06.541  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/updateCateAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.updateCateAdmin(com.tianma.BI_Process.Domain.CategoryAdminDim)
+2020-06-08 16:18:06.542  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/updateCateDim],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.updateCateDim(com.tianma.BI_Process.Dto.categoryUpdate)
+2020-06-08 16:18:06.547  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addCateInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addCateInfo(com.tianma.BI_Process.Domain.CategoryInfo)
+2020-06-08 16:18:06.549  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/deleteCateDim],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.deleteCateDim(java.lang.String)
+2020-06-08 16:18:06.549  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addCategory],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addCategory(com.tianma.BI_Process.Domain.CategoryDim)
+2020-06-08 16:18:06.550  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/deleteCateAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.deleteCateAdmin(com.tianma.BI_Process.Domain.CategoryAdminDim)
+2020-06-08 16:18:06.550  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findDim],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findDim(java.lang.String)
+2020-06-08 16:18:06.551  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addCateAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.addCateAdmin(com.tianma.BI_Process.Domain.CategoryAdminDim)
+2020-06-08 16:18:06.551  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/deleteCateInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.deleteCateInfo(java.lang.String)
+2020-06-08 16:18:06.551  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findUserformInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findUserformInfo(com.tianma.BI_Process.Domain.UserFormInfo)
+2020-06-08 16:18:06.551  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/updateCateAdmins],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.updateCateAdmins(com.tianma.BI_Process.Dto.CategoryAndUser)
+2020-06-08 16:18:06.551  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByCategoryCode],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByCategoryCode(java.lang.String)
+2020-06-08 16:18:06.552  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByCate],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByCate(java.lang.String)
+2020-06-08 16:18:06.553  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getchecklist],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.getAllCheckApproval()
+2020-06-08 16:18:06.553  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByUserCode],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByUserCode(java.lang.String)
+2020-06-08 16:18:06.554  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByParam],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByParameter(java.lang.String)
+2020-06-08 16:18:06.554  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByCode],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByCode(java.lang.String,java.lang.String,java.lang.String)
+2020-06-08 16:18:06.554  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByParameterCode],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByParameterCode(java.lang.String)
+2020-06-08 16:18:06.554  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findAllCategories],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findAllCategories()
+2020-06-08 16:18:06.554  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findAllParameters],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findAllParameters()
+2020-06-08 16:18:06.555  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findCateAdminByUser],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findCateAdminByUser(java.lang.String)
+2020-06-08 16:18:06.555  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findAllCateAndUsers],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findAllCateAndUsers()
+2020-06-08 16:18:06.555  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findAllCateAdmins],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findAllCateAdmins()
+2020-06-08 16:18:06.555  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/findRecords],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.AdminController.findRecordsByCaseId(java.lang.Integer)
+2020-06-08 16:18:06.556  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.tianma.BI_Process.Controller.HelloController.hello(java.lang.String)
+2020-06-08 16:18:06.558  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menuAdmin/changeMenuAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.MenuAdminController.changeMenuAdmin(com.tianma.BI_Process.Domain.MenuAdminDim)
+2020-06-08 16:18:06.558  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/menuAdmin/addMenuAdmin],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.MenuAdminController.addMenuAdmin(com.tianma.BI_Process.Domain.MenuAdminDim)
+2020-06-08 16:18:06.559  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/addUserInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.addUserInfo(com.tianma.BI_Process.Domain.UserFormInfo)
+2020-06-08 16:18:06.560  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/deleteUser],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.deleteUser(com.tianma.BI_Process.Domain.UserDim)
+2020-06-08 16:18:06.560  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/checkPassword],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.checkPassword(com.tianma.BI_Process.Dto.LoginInfo)
+2020-06-08 16:18:06.560  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/selectUserByCode],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.getUserByCode(java.lang.String)
+2020-06-08 16:18:06.561  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/changeUser],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.changeUser(com.tianma.BI_Process.Domain.UserDim)
+2020-06-08 16:18:06.561  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/addUser],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.addUser(com.tianma.BI_Process.Domain.UserDim)
+2020-06-08 16:18:06.561  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/findUserInfo],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.findUserInfo()
+2020-06-08 16:18:06.561  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/selectAllUser],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.getAllUser()
+2020-06-08 16:18:06.568  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/changePassword],methods=[GET || POST]}" onto public com.tianma.BI_Process.Util.Result com.tianma.BI_Process.Controller.UserController.changPassword(java.lang.String,java.lang.String)
+2020-06-08 16:18:06.571  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-06-08 16:18:06.586  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2020-06-08 16:18:06.586  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2020-06-08 16:18:06.586  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2020-06-08 16:18:06.590  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-08 16:18:06.591  INFO 5976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-08 16:18:06.723  INFO 5976 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerTaskScheduler'
+2020-06-08 16:18:06.753  WARN 5976 --- [main] o.s.w.s.s.t.h.DefaultSockJsService       : Failed to create a default WebSocketTransportHandler
+
+java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:142) ~[spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:108) ~[spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35) ~[spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.getDefaultTransportHandlers(DefaultSockJsService.java:92) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.handler.DefaultSockJsService.<init>(DefaultSockJsService.java:78) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.createSockJsService(SockJsServiceRegistration.java:317) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.SockJsServiceRegistration.getSockJsService(SockJsServiceRegistration.java:270) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.WebMvcStompWebSocketEndpointRegistration.getMappings(WebMvcStompWebSocketEndpointRegistration.java:128) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.WebMvcStompEndpointRegistry.getHandlerMapping(WebMvcStompEndpointRegistry.java:152) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurationSupport.stompWebSocketHandlerMapping(WebSocketMessageBrokerConfigurationSupport.java:78) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$f3a38d42.CGLIB$stompWebSocketHandlerMapping$12(<generated>) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$f3a38d42$$FastClassBySpringCGLIB$$3a2cb0b4.invoke(<generated>) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) [spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$f3a38d42.stompWebSocketHandlerMapping(<generated>) [spring-websocket-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_31]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_31]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_31]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_31]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$104/519492428.getObject(Unknown Source) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) [spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) [spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) [spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+
+2020-06-08 16:18:06.765  INFO 5976 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped URL path [/websocket/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2020-06-08 16:18:06.774  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2020-06-08 16:18:06.946  WARN 5976 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer] from ClassLoader [sun.misc.Launcher$AppClassLoader@4554617c]
+2020-06-08 16:18:06.946  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2020-06-08 16:18:06.947  INFO 5976 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-06-08 16:18:06.965  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-06-08 16:18:06.968  INFO 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-06-08 16:18:06.978  INFO 5976 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-08 16:18:06.982 ERROR 5976 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer] from ClassLoader [sun.misc.Launcher$AppClassLoader@4554617c]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$104/519492428.getObject(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer] from ClassLoader [sun.misc.Launcher$AppClassLoader@4554617c]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:519) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:207) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:188) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:127) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1020) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/tomcat/ContextBind
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760) ~[na:1.8.0_31]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:455) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:367) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2693) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredMethods(Class.java:1967) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 49 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.ContextBind
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 66 common frames omitted
+
+2020-06-08 16:18:06.996 ERROR 5976 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@75d4a5c2] to prepare test instance [com.tianma.BI_Process.TestApp@b46e103]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer] from ClassLoader [sun.misc.Launcher$AppClassLoader@4554617c]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$104/519492428.getObject(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer] from ClassLoader [sun.misc.Launcher$AppClassLoader@4554617c]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:519) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:207) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:188) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:127) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1020) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/tomcat/ContextBind
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760) ~[na:1.8.0_31]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:455) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:367) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2693) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredMethods(Class.java:1967) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 49 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.ContextBind
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 66 common frames omitted
+
+2020-06-08 16:28:16.214  INFO 14280 --- [main] com.tianma.BI_Process.TestApp            : Starting TestApp on SH-B1893421 with PID 14280 (started by Administrator in F:\BI\BI_ACL\Src\BI_Process)
+2020-06-08 16:28:16.216  INFO 14280 --- [main] com.tianma.BI_Process.TestApp            : No active profile set, falling back to default profiles: default
+2020-06-08 16:28:16.247  INFO 14280 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@59402b8f: startup date [Mon Jun 08 16:28:16 CST 2020]; root of context hierarchy
+2020-06-08 16:28:17.439 ERROR 14280 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 16:28:17.441  INFO 14280 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@59402b8f: startup date [Mon Jun 08 16:28:16 CST 2020]; root of context hierarchy
+2020-06-08 16:28:17.461 ERROR 14280 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@51399530] to prepare test instance [com.tianma.BI_Process.TestApp@73ad4ecc]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 16:31:17.885  INFO 14160 --- [main] com.tianma.BI_Process.TestApp            : Starting TestApp on SH-B1893421 with PID 14160 (started by Administrator in F:\BI\BI_ACL\Src\BI_Process)
+2020-06-08 16:31:17.887  INFO 14160 --- [main] com.tianma.BI_Process.TestApp            : No active profile set, falling back to default profiles: default
+2020-06-08 16:31:17.925  INFO 14160 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Mon Jun 08 16:31:17 CST 2020]; root of context hierarchy
+2020-06-08 16:31:19.389 ERROR 14160 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) [spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+
+2020-06-08 16:31:19.401  INFO 14160 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Mon Jun 08 16:31:17 CST 2020]; root of context hierarchy
+2020-06-08 16:31:19.404 ERROR 14160 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6b2ea799] to prepare test instance [com.tianma.BI_Process.TestApp@a52ca2e]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.tianma.BI_Process.Dto.MyWebSocket] from ClassLoader [sun.misc.Launcher$AppClassLoader@6bc7c054]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:758) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:723) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:708) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.test.mock.mockito.DefinitionsParser.parse(DefinitionsParser.java:62) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:131) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:172) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139) ~[spring-boot-test-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Ljavax/websocket/Session;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_31]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2575) ~[na:1.8.0_31]
+	at java.lang.Class.getDeclaredFields(Class.java:1908) ~[na:1.8.0_31]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:753) ~[spring-core-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.websocket.Session
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_31]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_31]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_31]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_31]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308) ~[na:1.8.0_31]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_31]
+	... 46 common frames omitted
+

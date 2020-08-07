@@ -1,0 +1,670 @@
+2019-09-10 11:23:46.404  INFO 19936 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 19936 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:23:46.408  INFO 19936 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:23:46.472  INFO 19936 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f2f2cc1: startup date [Tue Sep 10 11:23:46 CST 2019]; root of context hierarchy
+2019-09-10 11:23:47.074  WARN 19936 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.tianma.BI_Process]' package. Please check your configuration.
+2019-09-10 11:23:47.926  INFO 19936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:23:47.954  INFO 19936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:23:47.954  INFO 19936 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:23:47.965  INFO 19936 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:23:48.079  INFO 19936 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:23:48.079  INFO 19936 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1607 ms
+2019-09-10 11:23:48.213  INFO 19936 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:23:48.216  INFO 19936 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:23:48.217  INFO 19936 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:23:48.217  INFO 19936 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:23:48.217  INFO 19936 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:23:48.251  WARN 19936 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tianma.BI_Process.Service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-09-10 11:23:48.254  INFO 19936 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-09-10 11:23:48.278  INFO 19936 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-09-10 11:23:48.358 ERROR 19936 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.tianma.BI_Process.Controller.UserController required a bean of type 'com.tianma.BI_Process.Service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.tianma.BI_Process.Service.UserService' in your configuration.
+
+2019-09-10 11:24:14.804  INFO 23464 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 23464 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:24:14.807  INFO 23464 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:24:14.869  INFO 23464 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6646153: startup date [Tue Sep 10 11:24:14 CST 2019]; root of context hierarchy
+2019-09-10 11:24:15.497  WARN 23464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.tianma.BI_Process]' package. Please check your configuration.
+2019-09-10 11:24:16.271  INFO 23464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:24:16.297  INFO 23464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:24:16.298  INFO 23464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:24:16.316  INFO 23464 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:24:16.422  INFO 23464 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:24:16.422  INFO 23464 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1554 ms
+2019-09-10 11:24:16.572  INFO 23464 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:24:16.575  INFO 23464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:24:16.576  INFO 23464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:24:16.576  INFO 23464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:24:16.576  INFO 23464 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:24:16.619  WARN 23464 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tianma.BI_Process.Service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-09-10 11:24:16.621  INFO 23464 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-09-10 11:24:16.638  INFO 23464 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-09-10 11:24:16.711 ERROR 23464 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.tianma.BI_Process.Controller.UserController required a bean of type 'com.tianma.BI_Process.Service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.tianma.BI_Process.Service.UserService' in your configuration.
+
+2019-09-10 11:25:11.055  INFO 14364 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 14364 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:25:11.058  INFO 14364 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:25:11.137  INFO 14364 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@e50a6f6: startup date [Tue Sep 10 11:25:11 CST 2019]; root of context hierarchy
+2019-09-10 11:25:11.873  WARN 14364 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.tianma.BI_Process]' package. Please check your configuration.
+2019-09-10 11:25:12.728  INFO 14364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:25:12.755  INFO 14364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:25:12.755  INFO 14364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:25:12.766  INFO 14364 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:25:12.888  INFO 14364 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:25:12.889  INFO 14364 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1752 ms
+2019-09-10 11:25:13.046  INFO 14364 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:25:13.049  INFO 14364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:25:13.050  INFO 14364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:25:13.050  INFO 14364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:25:13.050  INFO 14364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:25:13.091  WARN 14364 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-09-10 11:25:13.094  INFO 14364 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-09-10 11:25:13.109  INFO 14364 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-09-10 11:25:13.195 ERROR 14364 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.tianma.BI_Process.Controller.UserController required a bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' in your configuration.
+
+2019-09-10 11:25:47.085  INFO 19860 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 19860 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:25:47.090  INFO 19860 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:25:47.172  INFO 19860 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@21507a04: startup date [Tue Sep 10 11:25:47 CST 2019]; root of context hierarchy
+2019-09-10 11:25:47.739  WARN 19860 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.chenxq.FReport.Repository]' package. Please check your configuration.
+2019-09-10 11:25:47.867  WARN 19860 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.tianma.BI_Process]' package. Please check your configuration.
+2019-09-10 11:25:48.615  INFO 19860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:25:48.648  INFO 19860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:25:48.649  INFO 19860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:25:48.665  INFO 19860 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:25:48.779  INFO 19860 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:25:48.780  INFO 19860 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1608 ms
+2019-09-10 11:25:48.953  INFO 19860 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:25:48.956  INFO 19860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:25:48.956  INFO 19860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:25:48.956  INFO 19860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:25:48.957  INFO 19860 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:25:48.994  WARN 19860 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2019-09-10 11:25:48.996  INFO 19860 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-09-10 11:25:49.011  INFO 19860 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-09-10 11:25:49.088 ERROR 19860 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.tianma.BI_Process.Controller.UserController required a bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.tianma.BI_Process.Repository.FineUserMapper' in your configuration.
+
+2019-09-10 11:26:15.753  INFO 22964 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 22964 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:26:15.756  INFO 22964 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:26:15.822  INFO 22964 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78b1cc93: startup date [Tue Sep 10 11:26:15 CST 2019]; root of context hierarchy
+2019-09-10 11:26:17.293  INFO 22964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:26:17.319  INFO 22964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:26:17.320  INFO 22964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:26:17.329  INFO 22964 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:26:17.440  INFO 22964 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:26:17.440  INFO 22964 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1618 ms
+2019-09-10 11:26:17.582  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:26:17.585  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:26:17.585  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:26:17.585  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:26:17.586  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:26:18.111  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:26:18.337  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78b1cc93: startup date [Tue Sep 10 11:26:15 CST 2019]; root of context hierarchy
+2019-09-10 11:26:18.395  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.lang.String com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-10 11:26:18.398  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-10 11:26:18.399  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-10 11:26:18.423  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:26:18.423  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:26:18.631  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-10 11:26:18.632  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-10 11:26:18.636  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-10 11:26:18.667  INFO 22964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-10 11:26:18.669  INFO 22964 --- [main] com.tianma.BI_Process.App                : Started App in 3.214 seconds (JVM running for 3.571)
+2019-09-10 11:27:20.081  INFO 22964 --- [http-nio-8012-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-10 11:27:20.085  INFO 22964 --- [http-nio-8012-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-10 11:27:20.120  INFO 22964 --- [http-nio-8012-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2019-09-10 11:27:20.235  INFO 22964 --- [http-nio-8012-exec-2] com.zaxxer.hikari.HikariDataSource       : test - Starting...
+2019-09-10 11:27:20.546  INFO 22964 --- [http-nio-8012-exec-2] com.zaxxer.hikari.HikariDataSource       : test - Start completed.
+2019-09-10 11:31:57.427  INFO 25000 --- [main] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 25000 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 11:31:57.430  INFO 25000 --- [main] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 11:31:57.503  INFO 25000 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@55a561cf: startup date [Tue Sep 10 11:31:57 CST 2019]; root of context hierarchy
+2019-09-10 11:31:58.822  INFO 25000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 11:31:58.847  INFO 25000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 11:31:58.848  INFO 25000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 11:31:58.858  INFO 25000 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 11:31:58.981  INFO 25000 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 11:31:58.982  INFO 25000 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1479 ms
+2019-09-10 11:31:59.122  INFO 25000 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 11:31:59.125  INFO 25000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 11:31:59.126  INFO 25000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 11:31:59.127  INFO 25000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 11:31:59.127  INFO 25000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 11:31:59.649  INFO 25000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:31:59.841  INFO 25000 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@55a561cf: startup date [Tue Sep 10 11:31:57 CST 2019]; root of context hierarchy
+2019-09-10 11:31:59.911  INFO 25000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-10 11:31:59.913  INFO 25000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-10 11:31:59.914  INFO 25000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-10 11:31:59.946  INFO 25000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:31:59.946  INFO 25000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 11:32:00.207  INFO 25000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-10 11:32:00.210  INFO 25000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-10 11:32:00.213  INFO 25000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-10 11:32:00.246  INFO 25000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-10 11:32:00.249  INFO 25000 --- [main] com.tianma.BI_Process.App                : Started App in 3.105 seconds (JVM running for 3.441)
+2019-09-10 11:32:12.908  INFO 25000 --- [http-nio-8012-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-10 11:32:12.908  INFO 25000 --- [http-nio-8012-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-10 11:32:12.931  INFO 25000 --- [http-nio-8012-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-09-10 11:32:13.036  INFO 25000 --- [http-nio-8012-exec-2] com.zaxxer.hikari.HikariDataSource       : test - Starting...
+2019-09-10 11:32:13.375  INFO 25000 --- [http-nio-8012-exec-2] com.zaxxer.hikari.HikariDataSource       : test - Start completed.
+2019-09-10 15:07:23.869  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 22872 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 15:07:23.870  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 15:07:23.922  INFO 22872 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42047e3a: startup date [Tue Sep 10 15:07:23 CST 2019]; root of context hierarchy
+2019-09-10 15:07:25.562  INFO 22872 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6fa3285] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-10 15:07:27.609  INFO 22872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 15:07:27.631  INFO 22872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 15:07:27.632  INFO 22872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 15:07:27.641  INFO 22872 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\javaSE1.8\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/javaSE1.8/jdk1.8/bin/../jre/bin/server;D:/javaSE1.8/jdk1.8/bin/../jre/bin;D:/javaSE1.8/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\javaSE1.8\jdk1.8\bin;D:\javaSE1.8\jdk1.8\jre\bin;D:\mysql-5.7.16-winx64\bin;D:\node;D:\node\node-global;D:\mongodb\bin;D:\SVN\bin;D:\Git\cmd;D:\Git\bin;D:\PYTHON\Scripts\;D:\PYTHON\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;C:\Users\Administrator\Desktop;;.]
+2019-09-10 15:07:27.814  INFO 22872 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 15:07:27.814  INFO 22872 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3892 ms
+2019-09-10 15:07:27.963  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 15:07:27.966  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 15:07:27.967  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 15:07:27.967  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 15:07:27.967  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 15:07:27.967  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-10 15:07:28.530  INFO 22872 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-10 15:07:28.716  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-10 15:07:28.717  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-10 15:07:28.720  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-10 15:07:28.720  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-10 15:07:28.721  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-10 15:07:28.722  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-10 15:07:28.723  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-10 15:07:28.955  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:07:29.125  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42047e3a: startup date [Tue Sep 10 15:07:23 CST 2019]; root of context hierarchy
+2019-09-10 15:07:29.174  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:07:29.174  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:07:29.480  WARN 22872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-09-10 15:07:29.512  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-10 15:07:29.521  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-10 15:07:29.527  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-10 15:07:29.544  INFO 22872 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-10 15:07:29.567  INFO 22872 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-10 15:07:29.581  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-10 15:07:29.585  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:07:29.587  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-10 15:07:29.590  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-10 15:07:29.607  INFO 22872 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.607  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.613  INFO 22872 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.613  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.621  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:07:29.621  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:07:29.652  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.652  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:07:29.667  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:07:29.667  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:07:29.670  INFO 22872 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-10 15:07:29.670  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-10 15:07:29.679  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:07:29.681  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:07:29.684  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:07:29.685  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:07:29.735  INFO 22872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-10 15:07:29.739  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 6.174 seconds (JVM running for 6.721)
+2019-09-10 15:07:47.368  INFO 22872 --- [http-nio-8012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-10 15:07:47.368  INFO 22872 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-10 15:07:47.401  INFO 22872 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-09-10 15:09:13.237  INFO 22872 --- [Thread-1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42047e3a: startup date [Tue Sep 10 15:07:23 CST 2019]; root of context hierarchy
+2019-09-10 15:09:13.242  INFO 22872 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-10 15:09:13.243  INFO 22872 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-10 15:09:13.671  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1893421 with PID 22872 (F:\BI-workspace\BI_Process\target\classes started by Administrator in F:\BI-workspace\BI_Process)
+2019-09-10 15:09:13.672  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-10 15:09:13.677  INFO 22872 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3476c05a: startup date [Tue Sep 10 15:09:13 CST 2019]; root of context hierarchy
+2019-09-10 15:09:14.338  INFO 22872 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6fa3285] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-10 15:09:14.480  INFO 22872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-10 15:09:14.481  INFO 22872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-10 15:09:14.481  INFO 22872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-10 15:09:14.532  INFO 22872 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-10 15:09:14.535  INFO 22872 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 858 ms
+2019-09-10 15:09:14.576  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-10 15:09:14.577  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-10 15:09:14.577  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-10 15:09:14.577  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-10 15:09:14.577  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-10 15:09:14.577  INFO 22872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-10 15:09:14.795  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-10 15:09:14.796  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-10 15:09:14.797  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-10 15:09:14.797  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-10 15:09:14.797  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-10 15:09:14.799  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-10 15:09:14.799  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-10 15:09:14.842  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:09:14.890  INFO 22872 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3476c05a: startup date [Tue Sep 10 15:09:13 CST 2019]; root of context hierarchy
+2019-09-10 15:09:14.902  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:09:14.902  INFO 22872 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-10 15:09:14.986  WARN 22872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-09-10 15:09:15.007  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-10 15:09:15.009  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-10 15:09:15.012  INFO 22872 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-10 15:09:15.017  INFO 22872 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-10 15:09:15.018  INFO 22872 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-10 15:09:15.020  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-10 15:09:15.021  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:09:15.021  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-10 15:09:15.021  INFO 22872 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-10 15:09:15.024  INFO 22872 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.024  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.029  INFO 22872 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.029  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.034  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:09:15.034  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:09:15.037  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.038  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-10 15:09:15.038  INFO 22872 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:09:15.038  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-10 15:09:15.039  INFO 22872 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-10 15:09:15.039  INFO 22872 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-10 15:09:15.046  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:09:15.050  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:09:15.051  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:09:15.052  INFO 22872 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-10 15:09:15.063  INFO 22872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-10 15:09:15.065  INFO 22872 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 1.515 seconds (JVM running for 112.046)
+2019-09-10 15:09:15.069  INFO 22872 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-10 15:09:17.362  INFO 22872 --- [http-nio-8012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-10 15:09:17.362  INFO 22872 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-10 15:09:17.368  INFO 22872 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 5 ms
+2019-09-11 19:21:36.584  INFO 6588 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 6588 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:21:36.585  INFO 6588 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:21:36.633  INFO 6588 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78c33099: startup date [Wed Sep 11 19:21:36 CST 2019]; root of context hierarchy
+2019-09-11 19:21:37.887  INFO 6588 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54ea4496] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:21:38.346  INFO 6588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:21:38.374  INFO 6588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:21:38.374  INFO 6588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:21:38.385  INFO 6588 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\software\java\apache-maven-3.3.9\bin;D:\software\git\Git\cmd;D:\Desktop;;.]
+2019-09-11 19:21:38.546  INFO 6588 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:21:38.546  INFO 6588 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1913 ms
+2019-09-11 19:21:38.663  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:21:38.667  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:21:38.667  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:21:38.667  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:21:38.667  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:21:38.667  INFO 6588 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:21:39.150  INFO 6588 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-11 19:21:39.295  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:21:39.296  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:21:39.298  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:21:39.299  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:21:39.299  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:21:39.301  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:21:39.302  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:21:39.461  INFO 6588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:21:39.604  INFO 6588 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@78c33099: startup date [Wed Sep 11 19:21:36 CST 2019]; root of context hierarchy
+2019-09-11 19:21:39.652  INFO 6588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:21:39.652  INFO 6588 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:21:39.907  INFO 6588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:21:39.930  INFO 6588 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:21:39.932  INFO 6588 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:21:39.936  INFO 6588 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:21:39.945  INFO 6588 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:21:39.960  INFO 6588 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:21:39.967  INFO 6588 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:21:39.970  INFO 6588 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:21:39.971  INFO 6588 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:21:39.974  INFO 6588 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:21:39.989  INFO 6588 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:39.989  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:39.994  INFO 6588 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:39.994  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:40.001  INFO 6588 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:21:40.002  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:21:40.031  INFO 6588 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:40.032  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:21:40.033  INFO 6588 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:21:40.033  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:21:40.036  INFO 6588 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:21:40.036  INFO 6588 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:21:40.044  INFO 6588 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:21:40.057  INFO 6588 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:21:40.061  INFO 6588 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:21:40.062  INFO 6588 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:21:40.098  INFO 6588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:21:40.102  INFO 6588 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 3.761 seconds (JVM running for 4.136)
+2019-09-11 19:22:35.251  INFO 6588 --- [http-nio-8012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-11 19:22:35.251  INFO 6588 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-11 19:22:35.269  INFO 6588 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-09-11 19:26:25.322  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 6692 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:26:25.323  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:26:25.372  INFO 6692 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ceccf79: startup date [Wed Sep 11 19:26:25 CST 2019]; root of context hierarchy
+2019-09-11 19:26:26.660  INFO 6692 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fea53b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:26:27.079  INFO 6692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:26:27.103  INFO 6692 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:26:27.103  INFO 6692 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:26:27.111  INFO 6692 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\software\java\apache-maven-3.3.9\bin;D:\software\git\Git\cmd;D:\Desktop;;.]
+2019-09-11 19:26:27.251  INFO 6692 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:26:27.251  INFO 6692 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1879 ms
+2019-09-11 19:26:27.362  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:26:27.365  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:26:27.366  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:26:27.366  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:26:27.366  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:26:27.366  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:26:27.828  INFO 6692 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-11 19:26:27.971  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:26:27.972  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:26:27.975  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:26:27.975  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:26:27.976  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:26:27.978  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:26:27.979  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:26:28.126  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:26:28.268  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ceccf79: startup date [Wed Sep 11 19:26:25 CST 2019]; root of context hierarchy
+2019-09-11 19:26:28.313  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:26:28.314  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:26:28.569  INFO 6692 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:26:28.598  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:26:28.600  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:26:28.606  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:26:28.615  INFO 6692 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:26:28.630  INFO 6692 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:26:28.638  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:26:28.641  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:26:28.643  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:26:28.645  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:26:28.660  INFO 6692 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.660  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.665  INFO 6692 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.666  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.674  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:26:28.674  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:26:28.700  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.700  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:26:28.702  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:26:28.702  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:26:28.704  INFO 6692 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:26:28.705  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:26:28.712  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:26:28.726  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:26:28.729  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:26:28.730  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:26:28.789  INFO 6692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:26:28.793  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 3.717 seconds (JVM running for 4.106)
+2019-09-11 19:27:26.509  INFO 6692 --- [http-nio-8012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-11 19:27:26.509  INFO 6692 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-11 19:27:26.526  INFO 6692 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-09-11 19:27:51.358  INFO 6692 --- [Thread-6] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ceccf79: startup date [Wed Sep 11 19:26:25 CST 2019]; root of context hierarchy
+2019-09-11 19:27:51.368  INFO 6692 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-09-11 19:27:51.368  INFO 6692 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-09-11 19:27:51.578  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 6692 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:27:51.578  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:27:51.580  INFO 6692 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57b854ce: startup date [Wed Sep 11 19:27:51 CST 2019]; root of context hierarchy
+2019-09-11 19:27:51.921  INFO 6692 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fea53b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:27:51.985  INFO 6692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:27:51.986  INFO 6692 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:27:51.986  INFO 6692 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:27:51.997  INFO 6692 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:27:51.998  INFO 6692 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 418 ms
+2019-09-11 19:27:52.034  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:27:52.035  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:27:52.035  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:27:52.035  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:27:52.035  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:27:52.035  INFO 6692 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:27:52.212  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:27:52.213  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:27:52.214  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:27:52.214  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:27:52.215  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:27:52.216  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:27:52.216  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:27:52.254  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:27:52.296  INFO 6692 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57b854ce: startup date [Wed Sep 11 19:27:51 CST 2019]; root of context hierarchy
+2019-09-11 19:27:52.305  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:27:52.306  INFO 6692 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:27:52.368  INFO 6692 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:27:52.379  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:27:52.380  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:27:52.383  INFO 6692 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:27:52.387  INFO 6692 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:27:52.388  INFO 6692 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:27:52.389  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:27:52.390  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:27:52.390  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:27:52.390  INFO 6692 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:27:52.392  INFO 6692 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.392  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.395  INFO 6692 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.396  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.400  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:27:52.400  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:27:52.404  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.404  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:27:52.405  INFO 6692 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:27:52.405  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:27:52.406  INFO 6692 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:27:52.406  INFO 6692 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:27:52.411  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:27:52.411  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:27:52.412  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:27:52.412  INFO 6692 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:27:52.422  INFO 6692 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:27:52.423  INFO 6692 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 0.866 seconds (JVM running for 87.734)
+2019-09-11 19:27:52.427  INFO 6692 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-11 19:28:38.226  INFO 5716 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 5716 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:28:38.229  INFO 5716 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:28:38.295  INFO 5716 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44f5c3f: startup date [Wed Sep 11 19:28:38 CST 2019]; root of context hierarchy
+2019-09-11 19:28:40.181  INFO 5716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d52c630] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:28:40.994  INFO 5716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:28:41.027  INFO 5716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:28:41.027  INFO 5716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:28:41.037  INFO 5716 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\software\java\apache-maven-3.3.9\bin;D:\software\git\Git\cmd;D:\Desktop;;.]
+2019-09-11 19:28:41.136  INFO 5716 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:28:41.136  INFO 5716 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2841 ms
+2019-09-11 19:28:41.308  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:28:41.315  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:28:41.315  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:28:41.316  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:28:41.316  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:28:41.316  INFO 5716 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:28:41.981  INFO 5716 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-11 19:28:42.171  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:28:42.177  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:28:42.179  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:28:42.180  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:28:42.181  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:28:42.183  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:28:42.184  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:28:42.427  INFO 5716 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:28:42.657  INFO 5716 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44f5c3f: startup date [Wed Sep 11 19:28:38 CST 2019]; root of context hierarchy
+2019-09-11 19:28:42.722  INFO 5716 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:28:42.722  INFO 5716 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:28:43.164  INFO 5716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:28:43.197  INFO 5716 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:28:43.199  INFO 5716 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:28:43.204  INFO 5716 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:28:43.222  INFO 5716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:28:43.246  INFO 5716 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:28:43.255  INFO 5716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:28:43.259  INFO 5716 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:28:43.261  INFO 5716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:28:43.264  INFO 5716 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:28:43.283  INFO 5716 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.284  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.289  INFO 5716 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.289  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.298  INFO 5716 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:28:43.298  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:28:43.330  INFO 5716 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.330  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:28:43.332  INFO 5716 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:28:43.332  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:28:43.336  INFO 5716 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:28:43.336  INFO 5716 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:28:43.345  INFO 5716 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:28:43.362  INFO 5716 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:28:43.366  INFO 5716 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:28:43.367  INFO 5716 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:28:43.414  INFO 5716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:28:43.422  INFO 5716 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 5.728 seconds (JVM running for 6.508)
+2019-09-11 19:29:17.645  INFO 6108 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 6108 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:29:17.646  INFO 6108 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:29:17.717  INFO 6108 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b6ce609: startup date [Wed Sep 11 19:29:17 CST 2019]; root of context hierarchy
+2019-09-11 19:29:19.623  INFO 6108 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e5a434f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:29:20.345  INFO 6108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:29:20.377  INFO 6108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:29:20.377  INFO 6108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:29:20.388  INFO 6108 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\software\java\apache-maven-3.3.9\bin;D:\software\git\Git\cmd;D:\Desktop;;.]
+2019-09-11 19:29:20.486  INFO 6108 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:29:20.486  INFO 6108 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2769 ms
+2019-09-11 19:29:20.666  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:29:20.671  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:29:20.672  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:29:20.672  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:29:20.672  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:29:20.672  INFO 6108 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:29:21.440  INFO 6108 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-11 19:29:21.642  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:29:21.643  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:29:21.646  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:29:21.646  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:29:21.648  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:29:21.650  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:29:21.651  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:29:21.883  INFO 6108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:22.122  INFO 6108 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b6ce609: startup date [Wed Sep 11 19:29:17 CST 2019]; root of context hierarchy
+2019-09-11 19:29:22.185  INFO 6108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:22.185  INFO 6108 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:22.552  INFO 6108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:29:22.586  INFO 6108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:29:22.587  INFO 6108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:29:22.592  INFO 6108 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:29:22.601  INFO 6108 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:29:22.623  INFO 6108 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:29:22.632  INFO 6108 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:29:22.636  INFO 6108 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:22.638  INFO 6108 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:29:22.642  INFO 6108 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:29:22.661  INFO 6108 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.662  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.667  INFO 6108 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.668  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.676  INFO 6108 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:22.676  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:22.709  INFO 6108 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.709  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:22.711  INFO 6108 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:22.711  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:22.714  INFO 6108 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:29:22.714  INFO 6108 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:29:22.723  INFO 6108 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:22.741  INFO 6108 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:22.745  INFO 6108 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:22.746  INFO 6108 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:22.795  INFO 6108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:29:22.799  INFO 6108 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 5.594 seconds (JVM running for 6.333)
+2019-09-11 19:29:36.432  INFO 4120 --- [restartedMain] com.tianma.BI_Process.App                : Starting App on SH-B1901421-1 with PID 4120 (E:\BI\BI_ACL\Src\BI_Process\target\classes started by zepeng_huo in E:\BI\BI_ACL\Src\BI_Process)
+2019-09-11 19:29:36.433  INFO 4120 --- [restartedMain] com.tianma.BI_Process.App                : No active profile set, falling back to default profiles: default
+2019-09-11 19:29:36.483  INFO 4120 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3abee4a5: startup date [Wed Sep 11 19:29:36 CST 2019]; root of context hierarchy
+2019-09-11 19:29:37.686  INFO 4120 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d8c6a625] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-11 19:29:38.141  INFO 4120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8012 (http)
+2019-09-11 19:29:38.164  INFO 4120 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-11 19:29:38.164  INFO 4120 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-09-11 19:29:38.172  INFO 4120 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\software\java\apache-maven-3.3.9\bin;D:\software\git\Git\cmd;D:\Desktop;;.]
+2019-09-11 19:29:38.313  INFO 4120 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-11 19:29:38.313  INFO 4120 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1830 ms
+2019-09-11 19:29:38.425  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-09-11 19:29:38.429  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-11 19:29:38.429  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-11 19:29:38.429  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-11 19:29:38.429  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-11 19:29:38.429  INFO 4120 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'corsFilter' to: [/*]
+2019-09-11 19:29:38.959  INFO 4120 --- [restartedMain] o.s.aop.framework.CglibAopProxy          : Method [java.util.List springfox.documentation.schema.property.OptimizedModelPropertiesProvider.candidateProperties(com.fasterxml.classmate.ResolvedType,com.fasterxml.jackson.databind.introspect.AnnotatedMember,com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition,springfox.documentation.spi.schema.contexts.ModelContext)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2019-09-11 19:29:39.107  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getuser],methods=[POST || GET]}" onto public java.util.List<com.tianma.BI_Process.Domain.FineUser> com.tianma.BI_Process.Controller.UserController.getuser()
+2019-09-11 19:29:39.109  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2019-09-11 19:29:39.111  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-11 19:29:39.114  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-11 19:29:39.115  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-11 19:29:39.118  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-11 19:29:39.118  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-11 19:29:39.266  INFO 4120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:39.423  INFO 4120 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3abee4a5: startup date [Wed Sep 11 19:29:36 CST 2019]; root of context hierarchy
+2019-09-11 19:29:39.470  INFO 4120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:39.470  INFO 4120 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-11 19:29:39.719  INFO 4120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-11 19:29:39.741  INFO 4120 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-09-11 19:29:39.742  INFO 4120 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-11 19:29:39.747  INFO 4120 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-09-11 19:29:39.755  INFO 4120 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-09-11 19:29:39.771  INFO 4120 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-09-11 19:29:39.778  INFO 4120 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-11 19:29:39.780  INFO 4120 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:39.782  INFO 4120 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getuser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.tianma.BI_Process.Controller.UserController}]] 
+2019-09-11 19:29:39.784  INFO 4120 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2019-09-11 19:29:39.798  INFO 4120 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.798  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.803  INFO 4120 --- [restartedMain] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.803  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.809  INFO 4120 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:39.809  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:39.835  INFO 4120 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.835  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.tianma.BI_Process.Domain.FineUser>(true)
+2019-09-11 19:29:39.837  INFO 4120 --- [restartedMain] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:39.837  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.tianma.BI_Process.Domain.FineUser(true)
+2019-09-11 19:29:39.840  INFO 4120 --- [restartedMain] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:29:39.840  INFO 4120 --- [restartedMain] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/getuser.com.tianma.BI_Process.Controller.UserController.getuser.DefaultGenericTypeNamingStrategy
+2019-09-11 19:29:39.847  INFO 4120 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:39.859  INFO 4120 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:39.862  INFO 4120 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:39.863  INFO 4120 --- [restartedMain] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getuser was user-controller
+2019-09-11 19:29:39.897  INFO 4120 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8012 (http) with context path ''
+2019-09-11 19:29:39.901  INFO 4120 --- [restartedMain] com.tianma.BI_Process.App                : Started App in 3.721 seconds (JVM running for 4.092)
+2019-09-11 19:30:13.125  INFO 4120 --- [http-nio-8012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-11 19:30:13.125  INFO 4120 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-11 19:30:13.142  INFO 4120 --- [http-nio-8012-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms

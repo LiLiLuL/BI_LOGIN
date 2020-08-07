@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianma.BI_Process.Repository.ApprovalCaseFactMapper">
+  <resultMap id="BaseResultMap" type="com.tianma.BI_Process.Domain.ApprovalCaseFact">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Create_User" jdbcType="VARCHAR" property="create_User" />
+    <result column="Approval_Id" jdbcType="INTEGER" property="approval_Id" />
+    <result column="Create_Date" jdbcType="TIMESTAMP" property="create_Date" />
+    <result column="User_Code" jdbcType="VARCHAR" property="user_Code" />
+    <result column="User_Name" jdbcType="VARCHAR" property="user_Name" />
+    <result column="Phone_Number" jdbcType="VARCHAR" property="phone_Number" />
+    <result column="Email" jdbcType="VARCHAR" property="email" />
+    <result column="Case_Title" jdbcType="VARCHAR" property="case_Title" />
+    <result column="Case_Status" jdbcType="INTEGER" property="case_Status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Id, Create_User, Approval_Id, Create_Date, User_Code, User_Name, Phone_Number, Email, 
+    Case_Title, Case_Status
+  </sql>
+  <select id="selectByExample" parameterType="com.tianma.BI_Process.Domain.ApprovalCaseFactExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from SYS_BP_Approval_Case_Fact
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from SYS_BP_Approval_Case_Fact
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from SYS_BP_Approval_Case_Fact
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="Id" keyProperty="id" parameterType="com.tianma.BI_Process.Domain.ApprovalCaseFact" useGeneratedKeys="true">
+    insert into SYS_BP_Approval_Case_Fact (Create_User, Approval_Id, Create_Date, 
+      User_Code, User_Name, Phone_Number, 
+      Email, Case_Title, Case_Status
+      )
+    values (#{create_User,jdbcType=VARCHAR}, #{approval_Id,jdbcType=INTEGER}, #{create_Date,jdbcType=TIMESTAMP}, 
+      #{user_Code,jdbcType=VARCHAR}, #{user_Name,jdbcType=VARCHAR}, #{phone_Number,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{case_Title,jdbcType=VARCHAR}, #{case_Status,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="Id" keyProperty="id" parameterType="com.tianma.BI_Process.Domain.ApprovalCaseFact" useGeneratedKeys="true">
+    insert into SYS_BP_Approval_Case_Fact
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="create_User != null">
+        Create_User,
+      </if>
+      <if test="approval_Id != null">
+        Approval_Id,
+      </if>
+      <if test="create_Date != null">
+        Create_Date,
+      </if>
+      <if test="user_Code != null">
+        User_Code,
+      </if>
+      <if test="user_Name != null">
+        User_Name,
+      </if>
+      <if test="phone_Number != null">
+        Phone_Number,
+      </if>
+      <if test="email != null">
+        Email,
+      </if>
+      <if test="case_Title != null">
+        Case_Title,
+      </if>
+      <if test="case_Status != null">
+        Case_Status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="create_User != null">
+        #{create_User,jdbcType=VARCHAR},
+      </if>
+      <if test="approval_Id != null">
+        #{approval_Id,jdbcType=INTEGER},
+      </if>
+      <if test="create_Date != null">
+        #{create_Date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="user_Code != null">
+        #{user_Code,jdbcType=VARCHAR},
+      </if>
+      <if test="user_Name != null">
+        #{user_Name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone_Number != null">
+        #{phone_Number,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="case_Title != null">
+        #{case_Title,jdbcType=VARCHAR},
+      </if>
+      <if test="case_Status != null">
+        #{case_Status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tianma.BI_Process.Domain.ApprovalCaseFact">
+    update SYS_BP_Approval_Case_Fact
+    <set>
+      <if test="create_User != null">
+        Create_User = #{create_User,jdbcType=VARCHAR},
+      </if>
+      <if test="approval_Id != null">
+        Approval_Id = #{approval_Id,jdbcType=INTEGER},
+      </if>
+      <if test="create_Date != null">
+        Create_Date = #{create_Date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="user_Code != null">
+        User_Code = #{user_Code,jdbcType=VARCHAR},
+      </if>
+      <if test="user_Name != null">
+        User_Name = #{user_Name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone_Number != null">
+        Phone_Number = #{phone_Number,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        Email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="case_Title != null">
+        Case_Title = #{case_Title,jdbcType=VARCHAR},
+      </if>
+      <if test="case_Status != null">
+        Case_Status = #{case_Status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tianma.BI_Process.Domain.ApprovalCaseFact">
+    update SYS_BP_Approval_Case_Fact
+    set Create_User = #{create_User,jdbcType=VARCHAR},
+      Approval_Id = #{approval_Id,jdbcType=INTEGER},
+      Create_Date = #{create_Date,jdbcType=TIMESTAMP},
+      User_Code = #{user_Code,jdbcType=VARCHAR},
+      User_Name = #{user_Name,jdbcType=VARCHAR},
+      Phone_Number = #{phone_Number,jdbcType=VARCHAR},
+      Email = #{email,jdbcType=VARCHAR},
+      Case_Title = #{case_Title,jdbcType=VARCHAR},
+      Case_Status = #{case_Status,jdbcType=INTEGER}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

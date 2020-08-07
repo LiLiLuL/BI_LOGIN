@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+</head>
+<body>
+    <div>111</div>
+        <div class="org-right org-form" id="form-card" ></div>
+        <script type="text/html" id="formhtml">
+            <h1>新建组织信息填写</h1>
+            <form action="next" id="org-form"  >
+                    <fieldset>
+                        <legend>申请表单</legend>
+                        <p>
+                            <span class="label"><i>*</i>组织维度类型:</span>
+                            <select name="type_Flag" >
+                                <option value="1">基地群</option>
+                                <option value="2">产品类型</option>
+                            </select>
+                        </p>
+                        <p>
+                            <span class="label"><i>*</i>上级部门:</span>
+                           <select name="parent_Department" id="orgnization" >
+                                <option value="1">基地群</option>
+                                <option value="2">产品类型</option>
+                           </select>
+                        </p>
+                        <p>
+                                <span class="label"><i>*</i>组织代码:</span>
+                                <%if(obj.org_Code==undefined){ %>
+                               <input name="org_Code" ></input>
+                               <%}else{%>
+                                <input name="org_Code" ><%=obj.org_Code %></input>
+                               <%}%>
+                        </p>
+                        <p>
+                                <span class="label"><i>*</i>组织名称:</span>
+                                <%if(obj.org_Name==undefined) {%>
+                                <input name="org_Name" ></input>
+                                <%}else{%>
+                                <input name="org_Name" value="<%=obj.org_Name %>"></input>
+                                <%}%>
+                        </p>
+                        <p class="register-btn">
+                            <button type="button" id="submit" class="btn btn-blue btnEvent">提交</button>
+                            <button id="cancel" type="button" class="btn btn-blue btnEvent">取消</button>
+                        </p>
+    
+                    </fieldset>
+                </form>
+    
+        </script>
+        <script >
+                       $().ready(function(){
+                        let obj={
+                           org_Code:'rrr',
+                           org_Name:'666'
+                       };
+                       $('#form-card').append(template('formhtml',{
+                           obj:obj
+                       }));
+                       })
+        </script>
+</body>
+</html>
+
+
+<form action="" class="myform">
+    <table id="search_parameter_result">
+        <thead>
+            <tr>
+                <th>属性编码</th>
+                <th>属性名称</th>
+            </tr>
+        </thead>
+    </table>
+</form>
+
+<form action="" class="myform">
+    <p>
+        <span class="label"><i>*</i>分类编码:</span>
+        <input type="text" name="category_Code"  value=""  />
+        <span class="label"><i>*</i>属性编码:</span>
+        <input type="text" name="parameter_Code"  value=""  />
+    </p>
+    <p>
+        <span class="label"><i>*</i>owner工号:</span>
+        <input type="text" name="admin_Code"  value=""  />
+    </p>
+</form>

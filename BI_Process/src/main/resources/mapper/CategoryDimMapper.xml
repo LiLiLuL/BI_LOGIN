@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianma.BI_Process.Repository.CategoryDimMapper">
+  <resultMap id="BaseResultMap" type="com.tianma.BI_Process.Domain.CategoryDim">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Category_Code" jdbcType="VARCHAR" property="category_Code" />
+    <result column="Category_Name" jdbcType="VARCHAR" property="category_Name" />
+    <result column="Create_User" jdbcType="VARCHAR" property="create_User" />
+    <result column="Create_Date" jdbcType="TIMESTAMP" property="create_Date" />
+    <result column="Invalid_Flag" jdbcType="BIT" property="invalid_Flag" />
+    <result column="Oper_Sign" jdbcType="VARCHAR" property="oper_Sign" />
+    <result column="Record_Date" jdbcType="TIMESTAMP" property="record_Date" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Id, Category_Code, Category_Name, Create_User, Create_Date, Invalid_Flag, Oper_Sign, 
+    Record_Date
+  </sql>
+  <select id="selectByExample" parameterType="com.tianma.BI_Process.Domain.CategoryDimExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from sys_bp_category_dim
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_bp_category_dim
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_bp_category_dim
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="Id" keyProperty="id" parameterType="com.tianma.BI_Process.Domain.CategoryDim" useGeneratedKeys="true">
+    insert into sys_bp_category_dim (Category_Code, Category_Name, Create_User, 
+      Create_Date, Invalid_Flag, Oper_Sign, 
+      Record_Date)
+    values (#{category_Code,jdbcType=VARCHAR}, #{category_Name,jdbcType=VARCHAR}, #{create_User,jdbcType=VARCHAR}, 
+      #{create_Date,jdbcType=TIMESTAMP}, #{invalid_Flag,jdbcType=BIT}, #{oper_Sign,jdbcType=VARCHAR}, 
+      #{record_Date,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="Id" keyProperty="id" parameterType="com.tianma.BI_Process.Domain.CategoryDim" useGeneratedKeys="true">
+    insert into sys_bp_category_dim
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="category_Code != null">
+        Category_Code,
+      </if>
+      <if test="category_Name != null">
+        Category_Name,
+      </if>
+      <if test="create_User != null">
+        Create_User,
+      </if>
+      <if test="create_Date != null">
+        Create_Date,
+      </if>
+      <if test="invalid_Flag != null">
+        Invalid_Flag,
+      </if>
+      <if test="oper_Sign != null">
+        Oper_Sign,
+      </if>
+      <if test="record_Date != null">
+        Record_Date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="category_Code != null">
+        #{category_Code,jdbcType=VARCHAR},
+      </if>
+      <if test="category_Name != null">
+        #{category_Name,jdbcType=VARCHAR},
+      </if>
+      <if test="create_User != null">
+        #{create_User,jdbcType=VARCHAR},
+      </if>
+      <if test="create_Date != null">
+        #{create_Date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="invalid_Flag != null">
+        #{invalid_Flag,jdbcType=BIT},
+      </if>
+      <if test="oper_Sign != null">
+        #{oper_Sign,jdbcType=VARCHAR},
+      </if>
+      <if test="record_Date != null">
+        #{record_Date,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tianma.BI_Process.Domain.CategoryDim">
+    update sys_bp_category_dim
+    <set>
+      <if test="category_Code != null">
+        Category_Code = #{category_Code,jdbcType=VARCHAR},
+      </if>
+      <if test="category_Name != null">
+        Category_Name = #{category_Name,jdbcType=VARCHAR},
+      </if>
+      <if test="create_User != null">
+        Create_User = #{create_User,jdbcType=VARCHAR},
+      </if>
+      <if test="create_Date != null">
+        Create_Date = #{create_Date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="invalid_Flag != null">
+        Invalid_Flag = #{invalid_Flag,jdbcType=BIT},
+      </if>
+      <if test="oper_Sign != null">
+        Oper_Sign = #{oper_Sign,jdbcType=VARCHAR},
+      </if>
+      <if test="record_Date != null">
+        Record_Date = #{record_Date,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tianma.BI_Process.Domain.CategoryDim">
+    update sys_bp_category_dim
+    set Category_Code = #{category_Code,jdbcType=VARCHAR},
+      Category_Name = #{category_Name,jdbcType=VARCHAR},
+      Create_User = #{create_User,jdbcType=VARCHAR},
+      Create_Date = #{create_Date,jdbcType=TIMESTAMP},
+      Invalid_Flag = #{invalid_Flag,jdbcType=BIT},
+      Oper_Sign = #{oper_Sign,jdbcType=VARCHAR},
+      Record_Date = #{record_Date,jdbcType=TIMESTAMP}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

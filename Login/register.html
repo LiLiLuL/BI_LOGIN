@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>用户注册</title>
+
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<link rel="stylesheet" type="text/css" href="static/lib/jquery-step/css/jquery.step.css">
+<link rel="stylesheet" type="text/css" href="static/lib/jquery-checkbox/css/jquery-labelauty.css">
+<script src="./js/util.js"></script>
+<script src="./js/browser.min.js"></script>
+
+</head>
+<body>
+<div>
+   <h1>账号注册及权限申请</h1>
+</div>
+<div class="step-body" id="myStep">
+	
+	<div class="step-header" style="width:80%">
+		<ul>
+			<li><p>阅读流程</p></li>
+			<li><p>注册申请</p></li>
+			<li><p>流程审批中</p></li>
+			<li><p>结束</p></li>
+		</ul>
+	</div>
+	<div class="step-content">
+		<div class="step-list">
+			<div class="page-panel-title">
+					<h3 class="page-panel-title-left">流程说明</h3>
+					
+			</div>
+			<div class="intro-flow">
+				<div class="intro-list">
+					<div class="intro-list-left">
+						注册申请
+					</div>
+					<div class="intro-list-right">
+						<span>1</span>
+						<div class="intro-list-content">
+							按照规则填写注册需要的所有信息，选择需要开通的菜单权限，角色权限（填报、查看的功能），数据权限，请按时填写
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="intro-list">
+					<div class="intro-list-left">
+						对应指标owner审批
+					</div>
+					<div class="intro-list-right">
+						<span>2</span>
+						<div class="intro-list-content">
+							对应指标owner审批开通的菜单权限，角色权限（填报、查看的功能），数据权限是否正确
+						</div>
+					</div>
+				</div>
+				<div class="intro-list intro-list-last">
+					<div class="intro-list-left">
+						完成
+					</div>
+					<div class="intro-list-right">
+						<span>5</span>
+						<div class="intro-list-content">
+							您的账号已生效，可进入登录界面进入报表界面
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-btn">
+				<div class="common-btn">
+					<a href="javascript:void(0);" id="applyBtn">马上申请</a>
+				</div>
+			</div>
+		</div>
+		<div class="step-list">
+				<div class="form-card" id="form-card">
+						<form action="" id="apply-form">
+						   
+							<fieldset style="min-height: 280px;">
+								<legend>账户信息</legend>
+								<p> 
+									<span class="label"><i>*</i>工号:</span>
+									<input type="text" name="create_User" id="usercode" value="" onfocus="clearContent()" onblur="usercodeRule()" />
+									<span class="warning" id="errCode"></span>
+									<span class="label"><i>*</i>用户名:</span><input type="text" name="user_Name" id="username" value="" />
+								</p>
+		
+								<p>
+									<span class="label"><i>*</i>部门:</span><input type="text" name="dept" id="dept" value="" /><span class="warning"></span>
+									<span class="label"><i>*</i>邮箱:</span>
+									<input type="email" name="email" id="email" value="" />
+									<span class="warning" id="errEmail"></span>
+								</p>
+								
+					
+								<p>
+									<span class="label">手机号:</span>
+									<input type="number" name="phone_Number" id="number" value="" />
+									<span class="warning" id="errNum"></span>
+								 </p>
+								<p>
+									<span class="label"><i>*</i>申请原因:</span>
+									<textarea cols="100" rows="6" name="apply_Reason" id="reason" value="" ></textarea>
+									<span class="warning" id="errReason"></span>
+								</p>
+
+							
+							</fieldset>
+							<fieldset>
+								<legend>权限申请信息</legend>
+								<p class="authority">
+									<span class="label"><i>*</i>选择对应的申请流程:</span><select name="approval_Id" id="check-workflow"></select>
+									<br />
+									<p><span class="label" style="width: 200px;text-align:left"><i>*</i>选择注册权限类别:</span></p>
+									<ul class="dowebok" id="authority-list"></ul>
+									<input type="hidden" name="authority_List"/>
+								</p>
+							</fieldset>
+						</form>
+					</div>
+			<div class="footer-btn">
+				<div class="common-btn">
+					<a href="javascript:void(0);" id="submit">提交</a>
+				</div>
+			</div>
+
+      </div>
+      <div class="step-list">
+            <div class="footer-btn">
+               <p>审批流程进行中，请稍等...</p>
+               <!-- <div class="common-btn">
+                     <a href="javascript:void(0);" id="submitBtn2">Next</a>
+               </div> -->
+            </div>
+   
+         </div>
+		<div class="step-list">
+			<div class="apply-finish">
+				<div class="apply-finish-header">
+					<img src="images/success1.png">
+					<div class="apply-finish-msg">恭喜您，注册成功！</div>
+				</div>
+				<div class="apply-finish-footer">
+               <p>尊敬的用户，您已注册成功，您的用户名为<span id="proNo">B189675</span>。</p>
+               <p><a href="./login.html">进入登录界面</a></p> 
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script src="static/lib/jquery/1.8/jquery.min.js"></script>
+<script src="static/lib/jquery-step/js/jquery.step.js"></script>
+<script src="static/lib/jquery-checkbox/js/jquery-labelauty.js"></script>
+<script type="text/babel">
+     $(function(){
+		$.ajax({
+				url:'/server/admin/findAllParameters',
+				type:'GET',
+				dataType:'json',
+				success:function(data){
+					let arr=data.data;
+					arr.map(item=>{
+						$("#authority-list").append("<li data-id='"+item.parameter_Code+"'><input type='checkbox' name='"+item.parameter_Code+"' data-labelauty='"+item.parameter_Name+"'></li>");
+					});
+					$(':input').labelauty();
+				}
+		})
+	  });
+	  
+	  var parameter_list=[];
+		$(".dowebok").on("click", "input", function () {
+				// 阻止事件冒泡
+				//window.event? window.event.cancelBubble = true : e.stopPropagation();
+				 let code = $(this).attr("name"); 
+				 let index=parameter_list.indexOf(code);
+				 if(index==-1){
+					parameter_list.push(code);
+				 }else{
+					 parameter_list.splice(index,1);
+				 }
+                console.log(code);
+				console.log(parameter_list);
+			
+			});
+
+	 $().ready(function () {
+            $.ajax({
+                url: '/server/admin/getallapp',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    let arr = data.data;
+                    arr.map(item => {
+						console.log(item.id)
+                        $("#check-workflow").append("<option value='" + item.id + "'>" + item.approval_Name + "</option>");
+                    })
+
+                }
+			});
+			
+		})
+	$(function() {
+
+		var step= $("#myStep").step({
+			animate:true,
+			initStep:1,
+			speed:1000
+		});
+
+		//表单提交的点击事件
+		$("#submit").click(function () {
+                let formAtrr = $("form").serializeArray();
+                let modal = {};
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+				modal.create_Date = getNowDate();
+				modal.authority_List=parameter_list;
+				let approval=$("#check-workflow option:selected").text();
+				let case_Title=modal.user_Name+'的'+approval;
+				modal.case_Title=case_Title;
+
+                console.log(modal)
+                //获得form表单的dom结构
+				console.log($("#apply-form").get(0));
+				$.ajax({
+					url:"/server/user/selectUserByCode",
+					type:'GET',
+					contentType: "application/json;charset=UTF-8",
+					data:{userCode:modal.create_User},
+					success:function(data){
+						let code=data.code;
+						if(code==1){
+							alert("用户名已注册，请直接登录")
+						}else{
+							$.ajax({
+								url:'/server/admin/addcase',
+								type:'POST',
+								data:JSON.stringify(modal),
+								contentType: "application/json;charset=UTF-8",
+								success:function(data){
+									if(data.code==1){
+										alert(modal.case_Title+"流程已成功提交，请等待审批");
+										var yes=step.nextStep();
+									}
+								},
+								error:function(){
+									alert("未知错误，请联系管理员")
+								}
+							})
+						}
+	
+					}
+				})
+
+            });
+		
+		
+		
+		$("#preBtn").click(function(event) {
+			var yes=step.preStep();
+
+		});
+		$("#applyBtn").click(function(event) {
+			var yes=step.nextStep();
+
+		});
+		$("#submitBtn").click(function(event) {
+			var yes=step.nextStep();
+
+
+		});
+		$("#submitBtn2").click(function(event) {
+			var yes=step.nextStep();
+
+
+		});
+		$("#goBtn").click(function(event) {
+			var yes=step.goStep(4);
+
+		});
+		
+
+
+		
+	});
+
+
+  $("#password").blur(function(){
+    let reg=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,18}/
+    let result=$("#password").val();
+    console.log(reg.test(result));
+    if(!reg.test(result)){
+      $("#errPass").append('*密码必须包含特殊字符、英文大小写以及数字，6-18位');
+    }
+  })
+  //监听工号填写规则
+  function usercodeRule(){
+    let reg=/^[A-Za-z0-9]+$/g; 
+    let result=$("#usercode").val();
+    $("#usercode").css({textTransform:"uppercase"});
+    if(result==""){
+      $("#errCode").append("*工号不能为空");
+    }else if(!reg.test(result)){
+      $("#errCode").append("*工号只包含英文字母和数字");
+
+    }
+  }
+  function clearContent(){
+    $("#errCode").empty();
+  }
+  //监听手机号的填写规则
+  $("#number").focus(function(){
+      $("#errNum").empty();
+  })
+  $("#number").blur(function(){
+    let reg=/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
+	let result=$("#number").val();
+	if(result.length!=11){
+		$("#errNum").append('*手机号长度必须是11位');
+
+	}else if(!reg.test(result)){
+      $("#errNum").append('*手机号必须是数字');
+    }
+  })
+	//监听邮箱的填写规则
+	$("#email").focus(function(){
+      $("#errEmail").empty();
+  })
+  $("#email").blur(function(){
+    let reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+	let result=$("#email").val();
+	if(result==""){
+		$("#errEmail").append('*邮箱不能为空');
+
+	}else if(!reg.test(result)){
+      $("#errEmail").append('*邮箱格式错误');
+    }
+  })
+
+</script>
+
+</body>
+</html>

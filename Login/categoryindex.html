@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类设置主页</title>
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="static/lib/jqueryFytxTips/Fytx_Tips.css">
+    <link rel="stylesheet" href="css/datatables.css">
+    <link type="text/css" rel="stylesheet" href="css/category.css" />
+
+</head>
+
+<body>
+    <div>
+        <ul class="category_menu" id="menu">
+            <li id="category"><a href="#category_tab">分类管理</a></li>
+            <li id="parameters"><a href="#parameters_tab">属性管理</a></li>
+            <li id="category_admin"><a href="#category_admin_tab">管理员设置</a></li>
+            <li ><a href="./changeCatgory/add_admin_setting.html">管理员设置</a></li>
+        </ul>
+        <div class="category_content">
+            <div id="category_tab" class="tab_content">
+                <div class="category_table">
+                    <div class="mtb10 clearfix" id="btn-operation">
+                        <button id="create_category" class="btn btn-blue btnEvent">创建分类</button>
+                        <button id="mofify_category" class="btn btn-yellow btnEvent">修改分类</button>
+                        <span class="r-f search-style">
+                            <input type="text" placeholder="输入分类名称或编码查询" value="" name="searchText"
+                                class="input-text" /><a href="javascript:;" class="btn btn-blue btnEvent"
+                                name="searchEvent">搜索</a>
+                        </span>
+                    </div>
+                    <table class="gallery table table_list table_striped table-bordered border " id="category_table"
+                        style="width: 100%;" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>分类编码</th>
+                                <th>分类名称</th>
+                                <th>创建人</th>
+                                <th>创建时间</th>
+                                <th>更新人</th>
+                                <th>更新时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="category_table_content"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="parameters_tab" class="tab_content" style="display: none;">
+                <div class="parameter_table">
+                    <div class="mtb10 clearfix" id="btn-operation">
+                        <button id="create_parameter" class="btn btn-blue btnEvent">创建分属性</button>
+                        <button id="mofify_parameter" class="btn btn-yellow btnEvent">修改属性</button>
+                        <span class="r-f search-style">
+                            <input type="text" placeholder="输入属性名称或编码查询" value="" name="searchText"
+                                class="input-text" /><a href="javascript:;" class="btn btn-blue btnEvent"
+                                name="searchEvent">搜索</a>
+                        </span>
+                    </div>
+                    <table class="gallery table table_list table_striped table-bordered border " id="parameter_table"
+                        style="width: 100%;" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>属性编码</th>
+                                <th>属性名称</th>
+                                <th>属性说明</th>
+                                <th>创建人</th>
+                                <th>创建时间</th>
+                                <th>更新人</th>
+                                <th>更新时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="parameter_table_content"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="category_admin_tab" class="tab_content" style="display: none;">
+                <div>
+                    <div class="mtb10 clearfix" id="btn-operation">
+                        <button id="create_category_admin" class="btn btn-blue btnEvent">新建管理员分类</button>
+                        <button id="mofify_category_admin" class="btn btn-yellow btnEvent">修改管理员分类</button>
+                        <span class="r-f search-style">
+                            <input type="text" placeholder="输入分类名称或编码查询" value="" name="searchText"
+                                class="input-text" /><a href="javascript:;" class="btn btn-blue btnEvent"
+                                name="searchEvent">搜索</a>
+                        </span>
+                    </div>
+                    <table class="gallery table table_list table_striped table-bordered border "
+                        id="category_admin_table" style="width: 100%;" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>分类编码</th>
+                                <th>分类名称</th>
+                                <th>属性编码</th>
+                                <th>属性名称</th>
+                                <th>管理员编码</th>
+                                <th>管理员姓名</th>
+                                <th>管理员部门</th>
+                                <th>创建人</th>
+                                <th>创建时间</th>
+                                <th>更新人</th>
+                                <th>更新时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="category_admin_table_content"></tbody>
+                        
+                    </table>
+
+
+                </div>
+            </div>
+            <div class="Paging" id="pagination" ></div>
+        </div>
+    </div>
+    <script src="static/lib/jquery/1.8/jquery.min.js"></script>
+    <script src="js/systable.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script src="static/lib/jqueryFytxTips/Fytx_Tips_Config.js"></script>
+    <script src="static/lib/jqueryFytxTips/Fytx_Tips.js"></script>
+    <script src="js/datatables.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/form.js"></script>
+    <script type="text/html" id="category_table_html">
+        <%if(list!=""){ %>	
+        <% for(var i = 0; i < pageym; i++) { %>
+        <% var num = (page-1) * pagenum + i; %>
+        <tr class="relative" data-id="<%=list[num].id%>">
+            <td><%= num+1 %></td>
+            <td><%=list[num].category_Code%></td>
+            <td><%=list[num].category_Name%></td>
+            <td><%=list[num].create_User%></td>
+            <td ><%=list[num].create_Date %> </td>
+            <td ><%=list[num].oper_Sign %> </td>
+            <td ><%=list[num].record_Date %> </td>
+        </tr>
+        <% } %>
+        
+        <% } else{%>
+                <tr><td colspan="7">分类不存在</td></tr>
+            <% } %>
+    </script>
+    <script type="text/html" id="parameter_table_html">
+        <%if(list!=""){ %>	
+        <% for(var i = 0; i < pageym; i++) { %>
+        <% var num = (page-1) * pagenum + i; %>
+        <tr class="relative" data-id="<%=list[num].id%>">
+            <td><%=num+1%></td>
+            <td><%=list[num].parameter_Code%></td>
+            <td><%=list[num].parameter_Name%></td>
+            <td><%=list[num].parameter_Description%></td>
+            <td><%=list[num].create_User%></td>
+            <td ><%=list[num].create_Date %> </td>
+            <td ><%=list[num].oper_Sign %> </td>
+            <td ><%=list[num].record_Date %> </td>
+        </tr>
+        <% } %>
+        
+        <% } else{%>
+                <tr><td colspan="8">属性不存在</td></tr>
+            <% } %>
+    </script>
+    <script type="text/html" id="category_admin_table_html">
+        <%if(list!=""){ %>	
+        <% for(var i = 0; i < pageym; i++) { %>
+        <% var num = (page-1) * pagenum + i; %>
+        <tr class="relative" data-id="<%=list[num].id%>">
+            <td><%= num+1 %></td>
+            <td><%=list[num].category_Code%></td>
+            <td><%=list[num].category_Name%></td>
+            <td><%=list[num].parameter_Code%></td>
+            <td><%=list[num].parameter_Name%></td>
+            <td><%=list[num].user_Code%></td>
+            <td><%=list[num].user_Name%></td>
+            <td><%=list[num].dept%></td>
+            <td><%=list[num].create_User%></td>
+            <td ><%=list[num].create_Date %> </td>
+            <td ><%=list[num].oper_Sign %> </td>
+            <td ><%=list[num].record_Date %> </td>
+        </tr>
+        <% } %>
+        
+        <% } else{%>
+                <tr><td colspan="9">分类-管理员信息不存在</td></tr>
+            <% } %>
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(".tab_content").hide();
+            $("ul.category_menu li:first").addClass("tab_active").show();
+            $(".tab_content:first").show();
+
+
+            $("ul.category_menu li").click(function () {
+                $("ul.category_menu li").removeClass("tab_active");
+                $(this).addClass("tab_active");
+                $(".tab_content").hide();
+
+                let activeTab = $(this).find("a").attr("href");
+                console.log(activeTab);
+                $(activeTab).fadeIn();
+                if (activeTab == "#parameters_tab") {
+                    tableInit("parameter_table", "parameter_table_content", "parameter_table_html", "/server/admin/findAllParameters");
+                } else if (activeTab == "#category_admin_tab") {
+                   tableInit("category_admin_table", "category_admin_table_content", "category_admin_table_html", "/server/admin/findAllCateAndUsers");
+
+                } else if (activeTab == "#category_tab") {
+                   tableInit("category_table", "category_table_content","category_table_html","/server/admin/findAllCategories");
+
+                }
+                return false;
+            })
+            tableInit("category_table", "category_table_content", "category_table_html", "/server/admin/findAllCategories");
+
+        });
+        //增加分类弹出层
+        $("#create_category").click(function () {
+            let form_category = CATEGORY;
+            let modal = {};
+            modal.create_Date = getNowDate();
+            modal.create_User = sessionStorage.userCode;
+            $.confirm("新建分类信息", form_category, modal);
+            $.isok = function (ok) {
+
+                let formAtrr = $("#category-form").serializeArray();
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+                if (modal.category_Code == '' || modal.category_Name == '') {
+                    alert("分类信息或编码不能为空！");
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "/server/admin/addCategory",
+                        dataType: 'json',
+                        contentType: "application/json;charset=UTF-8",
+                        data: JSON.stringify(modal),
+                        success: function (res) {
+                            if (res.code == 2) {
+                                $.toast("该分类编码已存在", 3, true);
+
+                            } else if (res.code == 1) {
+                                $.toast("增加分类信息成功", 3, true)
+
+
+                            }
+                        }
+                    })
+
+                }
+
+            }
+        })
+        //修改分类弹出层
+        $("#mofify_category").click(function () {
+            let form_search = CATEGORY_SEARCH;
+            let search_data = {};
+            $.confirm("选择修改的分类", form_search);
+            var category_table = $("#search_category_result").DataTable({
+                paging: false,
+                scrollY: 200,
+
+                "ajax": "/server/admin/findAllCategories",
+                "columns": [
+                    { "data": "category_Code" },
+                    { "data": "category_Name" }
+                ],
+                initComplete: function () {
+                    this.api().columns().every(function () {
+                        let column = this;
+                        let select = $('<select><option value=""></option></select>')
+                            .appendTo($(column.footer()).empty())
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+
+                        column.data().unique().sort().each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>')
+                        });
+                    });
+                },
+            })
+            //选中行数据
+            $('#search_category_result tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    category_table.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+                search_data = category_table.rows('.selected').data()[0];
+            });
+            //选中后跳转修改详细页
+            $.isok = function (ok) {
+                ok = search_data;
+                let count = Object.keys(search_data).length;
+                if (count == 0) {
+                    alert("请选择分类");
+                } else {
+                    let id = ok.category_Code;
+                    window.location.href = "./changeCatgory/modity_category.html?id=" + id;
+                }
+            }
+
+        })
+        //增加分类属性弹出框
+        $("#create_parameter").click(function () {
+            let form_category = PARAMETER;
+            let modal = {};
+            modal.create_Date = getNowDate();
+            modal.create_User = sessionStorage.userCode;
+            $.confirm("新建属性", form_category, modal);
+            $.isok = function (ok) {
+
+                let formAtrr = $("#parameter-form").serializeArray();
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+                if (modal.parameter_Code == '' || modal.parameter_Name == '') {
+                    alert("分类信息或编码不能为空！");
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "/server/admin/addCateInfo",
+                        dataType: 'json',
+                        contentType: "application/json;charset=UTF-8",
+                        data: JSON.stringify(modal),
+                        success: function (res) {
+                            if (res.code == 2) {
+                                $.toast("该属性已存在", 3, true);
+
+                            } else if (res.code == 1) {
+                                $.toast("增加属性信息成功", 3, true)
+
+
+                            }
+                        }
+                    })
+
+                }
+
+            }
+        })
+
+        //修改属性弹出层
+        $("#mofify_parameter").click(function () {
+            let form_search = PARAMETER_SEARCH;
+            let search_data = {};
+            $.confirm("选择修改的分类", form_search);
+            let parameter_table = $("#search_parameter_result").DataTable({
+                paging: false,
+                scrollY: 200,
+
+                "ajax": "/server/admin/findAllParameters",
+                "columns": [
+                    { "data": "parameter_Code" },
+                    { "data": "parameter_Name" }
+                ],
+                initComplete: function () {
+                    this.api().columns().every(function () {
+                        let column = this;
+                        let select = $('<select><option value=""></option></select>')
+                            .appendTo($(column.footer()).empty())
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+
+                        column.data().unique().sort().each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>')
+                        });
+                    });
+                }
+            })
+            //选中行数据
+            $('#search_parameter_result tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    parameter_table.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+                search_data = parameter_table.rows('.selected').data()[0];
+            });
+            //选中后跳转修改详细页
+            $.isok = function (ok) {
+                ok = search_data;
+                let count = Object.keys(search_data).length;
+                if (count == 0) {
+                    alert("请选择分类");
+                } else {
+                    let id = ok.parameter_Code;
+                    window.location.href = "./changeCatgory/modify_parameter.html?id=" + id;
+                }
+            }
+        })
+
+        //新建属性管理员信息
+        $("#create_category_admin").click(function () {
+            let form_category = ADMIN_SETTING;
+            let modal = {};
+            modal.create_Date = getNowDate();
+            modal.create_User = sessionStorage.userCode;
+            $.confirm("设置属性-管理员信息", form_category, modal);
+            $.isok = function (ok) {
+
+                let formAtrr = $("#admin-setting-form").serializeArray();
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+                console.log("111");
+                if (modal.parameter_Code == '' || modal.category_Code == ''|| modal.admin_Code=='') {
+                    alert("分类编码或属性编码或owner工号不能为空！");
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "/server/admin/addCateAdmin",
+                        dataType: 'json',
+                        contentType: "application/json;charset=UTF-8",
+                        data: JSON.stringify(modal),
+                        success: function (res) {
+                            if (res.code == 2) {
+                                $.toast("该属性-管理员关系已存在", 3, true);
+
+                            } else if (res.code == 1) {
+                                $.toast("增加属性-管理员关系成功", 3, true);
+
+                            }
+                        }
+                    })
+
+                }
+
+            }
+
+
+
+        })
+
+        //去到用户管理修改页面
+        $("#mofify_category_admin").click(function(){
+            window.location.href = "./changeCatgory/modify_admin_setting.html";
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

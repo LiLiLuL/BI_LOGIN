@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./js/sockjs.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script type="text/javascript" src="js/systable.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script src="./js/browser.min.js"></script>
+
+</head>
+
+<body>
+    <div class="userlist">
+        <!-- <button id="createBtn" class="btn btn-blue btnEvent">创建用户</button> -->
+        <div class="form-card" id="form-card">
+            <h1>注册信息填写</h1>
+            <form action="" id="apply-form">
+                <fieldset>
+                    <legend>申请表单</legend>
+                    <p>
+                        <span class="label"><i>*</i>工号:</span>
+                        <input type="text" name="user_Code" id="usercode" value="" onfocus="clearContent()"
+                            onblur="usercodeRule()" />
+                        <span class="warning" id="errCode"></span>
+                    </p>
+                    <p><span class="label"><i>*</i>用户名:</span><input type="text" name="user_Name" id="username"
+                            value="" /></p>
+                    <p><span class="label"><i>*</i>部门:</span><input type="text" name="dept" id="dept" value="" /></p>
+                    <p>
+                        <span class="label"><i>*</i>密码:</span>
+                        <input type="password" name="user_Password" id="password" value="" onfocus="clearPwd()"
+                            onblur="pwdRule()" />
+                        <span class="warning" id="errPass"></span>
+                    </p>
+                    <p>
+                        <span class="label">手机号:</span>
+                        <input type="number" name="phone_Number" id="number" value="" onfocus="clearNum()"
+                            onblur="numRule()" />
+                        <span class="warning" id="errNum"></span>
+                    </p>
+                    <p>
+                        <span class="label"><i>*</i>邮箱:</span>
+                        <input type="email" name="email" id="email" value="" onfocus="clearEmail()"
+                            onblur="emailRule()" />
+                        <span class="warning" id="errEmail"></span>
+                    </p>
+                    <p class="register-btn">
+                        <button type="button" id="submit" class="btn btn-blue btnEvent">提交</button>
+                        <button id="cancel" type="button" class="btn btn-blue btnEvent">取消</button>
+                    </p>
+
+                </fieldset>
+            </form>
+        </div>
+        <div class="mytable">
+            <div class="mtb10 clearfix" id="btn-operation">
+                <!-- <a href="javascript:;" class="btn btn-green btnEvent" name="DeleteCheckbox">删除选中</a> -->
+                <button id="createBtn" class="btn btn-blue btnEvent">创建用户</button>
+                <span class="r-f search-style">
+                    <input type="text" placeholder="输入工号或员工姓名查询" value="" name="searchText" class="input-text" /><a
+                        href="javascript:;" class="btn btn-blue btnEvent" name="searchEvent">搜索</a>
+                </span>
+            </div>
+            <table class="gallery table table_list table_striped table-bordered border " id="tableList"
+                style="width: 100%;" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th width="50px">
+                            <label class="checkbox relative"><input type="checkbox" class="ace" name="checkbox"><span
+                                    class="lbl"></span></label>
+                        </th>
+                        <th>工号</th>
+                        <th>生效状态</th>
+                        <th>姓名</th>
+                        <th>邮箱</th>
+                        <th>手机号</th>
+                        <th>注册时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="UserList">
+                </tbody>
+            </table>
+            <div class="Paging" id="pagination"></div>
+        </div>
+    </div>
+    <script>
+       
+        $().ready(function () {
+            let regPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,18}/;
+            let regCode = /^[A-Za-z0-9]+$/g;
+            let regNum=/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+            let regEmail=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            //表单提交的点击事件
+            $("#submit").click(function () {
+                if (regPwd.test($("#password").val()) && regCode.test($("#usercode").val())&&regNum.test($("#number").val())&&regEmail.test($("#email").val())) {
+                   userRegister();
+                } else {
+                    alert("请正确填写用户名和密码");
+                }
+            });
+
+
+        })
+        function userRegister(){
+            let formAtrr = $("form").serializeArray();
+                let modal = {};
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+                modal.create_Date = getNowDate();
+                console.log(modal)
+                //获得form表单的dom结构
+                console.log($("#apply-form").get(0));
+                //
+                $.ajax({
+                    // url: 'http://localhost:8011/admin/addflowcase',
+                    url: '/server/user/addUser',
+                    type: 'POST',
+                    contentType: "application/json;charset=UTF-8",
+                    data: JSON.stringify(modal),
+                    dataType: 'json',
+                    success: function (data) {
+                        let flag = data.code;
+                        if (flag == 1) {
+                            alert("用户注册成功");
+                        } else if (flag == 2) {
+                            alert("用户已存在");
+                        }
+                    }
+                })
+        }
+
+        /*js自定义弹出框（弹出层，遮罩层）*/
+        mask = document.createElement('div');
+        /*用户定义js开始*/
+        boot('#createBtn', '#form-card', {
+            //position: 'top-left',
+            //yOffset: 100,
+            //xOffset: 30,
+            //keyToHide: 'q',
+            submit_flag: true
+        });
+        console.log(mask);
+
+
+    </script>
+    <script type="text/html" id="tablehtml">
+	<%if(list!=""){ %>	
+	<% for(var i = 0; i < pageym; i++) { %>
+	<% var num = (page-1) * pagenum + i; %>
+	<tr class="relative" data-id="<%=list[num].id%>">
+        <td><label class="checkbox relative"><input type="checkbox" class="ace" name="checkbox"><span class="lbl"></span></label></td>
+        <td><%=list[num].user_Code%></td>
+        <td>
+		<% if(list[num].invalid_Flag==false) {%>
+		<span class="name_status  plf10 btn btn-gray" data-id="0">关闭</span>
+		<%} if(list[num].invalid_Flag==true) {%>
+		<span class="name_status  plf10 btn btn-green" data-id="1">启用</span>
+		<%}%>
+        </td>
+        <td><%=list[num].user_Name%></td>
+        <td><%=list[num].email%></td>
+		<td ><%=list[num].phone_Number %> </td>
+		<td ><%=list[num].create_Date %> </td>
+		<td>
+		<button class="btn btn-danger padding5" name="deleteEvent">删除</button>
+		<button class="btn btn-blue padding5" name="modifyEvent">修改</button>
+		<!-- <button class="btn btn-blue padding5" name="detailedEvent">详细</button> -->
+		</td>
+	</tr>
+	<% } %>
+	
+	<% } else{%>
+			<tr><td colspan="9">该员工不存在</td></tr>
+		<% } %>
+    </script>
+    <script>
+        new SYSTableSorter({
+            TableName: 'tableList',
+            btnArea: 'btn-operation',
+            paginName: 'pagination',
+            curPage: 1,//声明默认显示页数为0
+            Sequence: [2, 3, 4, 5,6], //排序
+            Callback: function (obj, index, curPage) {//index 方法集合
+                var sysindex = function (callback) {
+                    index.ajaxGet("/server/user/selectAllUser", callback); //回调方法get
+                };
+                sysindex(function (listArr) {
+                    //使用json获取数据 
+                    var pageSize = 10;//设置每页显示数量
+                    var total = listArr.data.length//获取数据总数
+                    var pageTotal = Math.ceil(total / pageSize);//获取页码数
+                    var contentname = TAB$('UserList');
+                    var Table = TAB$(index.par.TableName);
+                    var currentPages = curPage * pageSize < total ? pageSize : total - (curPage - 1) * pageSize;//判断页码
+                    var html = template('tablehtml', {
+                        page: curPage, //当前页数
+                        pagenum: pageSize, //每页显示数量
+                        pageym: currentPages, //当前页码
+                        list: listArr.data,
+                    });
+                    contentname.innerHTML = html;
+                    index.BtnoperationMethod(Table, index); //按钮操作事件方法   
+                    index.pageTableMethod(html, curPage, pageTotal, pageSize, total);//分页功能设置 
+                    //TAB$('tablehtml').remove();
+                });
+                //上面主要通过javascript json模式进行数据操作,同时也可以使用API接口形式进行数据操作
+
+            },//主要指的回调table数据
+            DeleteEvent: function (layer, index, id) { //layer当前层,index table方法集合,id根据数据id进行数据删除修改
+                let data = { id: id };
+                data = JSON.stringify(data);
+                alert("确定删除？");
+                index.ajaxPost('/server/user/deleteUser', data);//post提交方法
+                alert("删除成功");
+                window.location.reload(true); //提交成功后强制性刷新页面
+                //layer.parentNode.remove();//删除table显示在页面上的当前显示数据
+            }, //删除
+            ModifyEvent: function (layer, index, id) {
+                window.location.href = "./modify.html"
+
+
+            }, //修改
+            SaveEvent: function (layer, index, id, data, evnet) {  //layer当前层,index table集合,id根据数据id进行数据删除修改,evnet当前事件对象
+                index.ajaxPost('application/json/directory.json&id=' + id, data, evnet, layer); // 分别为url地址,data数据,evnet,事件对象,layer当前层
+            },//保存提交修改方法
+            DetailedEvent: function (layer, index, id) {
+                //,可设置链接地址跳转,或是弹框显示内容(弹框可使用SYSbox弹框插件)也可以使用第三方
+
+
+            },//详细(自己写)		
+            CheckboxDeleteEvent: function (index, layer, id) {//  remove删除当前显示数据
+                index.ajaxPost('application/json/directory.json&id=' + id);
+                layer.remove();
+            },//Checkbox删除事件
+            SearchEvent: function (index, value) {//value查询条件内容关键字
+                //根据查询条件筛选内容方法
+                let reg=/^[1-9]\d*$/g;
+                let url;
+                if(reg.test(value)){
+                    url="/server/user/getUserByCodeFuzzy?userCode=" + value;
+                }else{
+                   url="/server/user/getUserByNameFuzzy?userName=" + value;
+                }
+                console.log(reg.test(value));
+
+                //通过get方法获取查询内容
+                $.ajax({
+                    url:url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        let res = data.data;
+                        //使用json获取数据 
+                        let curPage = 1;
+                        let pageSize = 10;//设置每页显示数量
+                        let total = res.length//获取数据总数
+                        let pageTotal = Math.ceil(total / pageSize);//获取页码数
+                        let contentname = TAB$('UserList');
+                        let Table = TAB$(index.par.TableName);
+                        let currentPages = curPage * pageSize < total ? pageSize : total - (curPage - 1) * pageSize;//判断页码
+                        let html = template('tablehtml', {
+                            page: curPage, //当前页数
+                            pagenum: pageSize, //每页显示数量
+                            pageym: currentPages, //当前页码
+                            list: res,
+                        });
+                        contentname.innerHTML = html;
+                        index.BtnoperationMethod(Table, index); //按钮操作事件方法   
+                        index.pageTableMethod(html, curPage, pageTotal, pageSize, total);//分页功能设置         
+                    }
+                })
+
+
+
+            }
+        });
+        //时间转换,template插件扩展功能
+        template.defaults.imports.timestamp = function (date, format) {
+            if (typeof date === "string") {
+                var mts = date.match(/(\/Date(\d+)\/)/);
+                if (mts && mts.length >= 3) {
+                    date = parseInt(mts[2]);
+                }
+            }
+            date = new Date(parseInt(date * 1000));
+            if (!date || date.toUTCString() == "Invalid Date") {
+                return "";
+            }
+            var map = {
+                "M": date.getMonth() + 1, //月份
+                "d": date.getDate(), //日
+                "h": date.getHours(), //小时
+                "m": date.getMinutes(), //分
+                "s": date.getSeconds(), //秒
+                "q": Math.floor((date.getMonth() + 3) / 3), //季度
+                "S": date.getMilliseconds() //毫秒
+            };
+            format = format.replace(/([yMdhmsqS])+/g, function (all, t) {
+                var v = map[t];
+                if (v !== undefined) {
+                    if (all.length > 1) {
+                        v = '0' + v;
+                        v = v.substr(v.length - 2);
+                    }
+                    return v;
+                } else if (t === 'y') {
+                    return (date.getFullYear() + '').substr(4 - all.length);
+                }
+                return all;
+            });
+            return format;
+        };
+    </script>
+</body>
+
+</html>

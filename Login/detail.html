@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/table.css" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <title>审批详情页</title>
+</head>
+
+<body>
+    <div>
+     <ul class="nav">
+         <li><a href="./operation.html">首页</a><span class="arrow">&gt;</span></li>
+         <li><a href="" id="title" ></a></li>
+     </ul>
+
+    </div>
+    <div class="details">
+    <form id="detail-form">
+        <p>
+            <span class="label">用户名:</span>
+            <input type="text" name="user_Name" id="username"  class="unable_edit" readonly/>
+            <span class="label">工号:</span>
+            <input type="text" name="create_User_Code" id="usercode" class="unable_edit" readonly />
+            <span class="label">部门:</span><input type="text" name="dept" id="dept" value="" class="unable_edit" readonly/>
+        </p>
+        <p>
+            <span class="label">手机号:</span>
+            <input type="number" name="phone_Number" id="number" value="" class="unable_edit" readonly/>
+           <span class="label">邮箱:</span>
+           <input type="email" name="email" id="email" value=""  class="unable_edit" readonly/>
+           <span class="label">申请时间:</span>
+           <input type="text" name="create_Date" id="date" value="" class="unable_edit" readonly/>
+        </p>
+        <p>
+            <span class="label">申请理由:</span>
+            <input type="number" name="apply_Reason" id="apply_Reason" value="" class="unable_edit" readonly/>
+        </p>
+        <p class="checked-list">
+            <span class="label">申请权限清单:</span>
+            <ul id="authority-list" class="checked-list"></ul>           
+        </p>
+        
+        
+        
+        
+        <hr/>
+        <div class="mytable">
+            <div class="" id="btn-operation">
+                <h3  class="label">审批记录：</h3>
+            </div>
+            <table class="gallery table table_list table_striped table-bordered border " id="approval_table"
+            style="width: 100%;" cellpadding="0">
+             <thead>
+                <tr>
+                    
+                    <th>操作时间</th>
+                    <th>操作者</th>
+                    <th>操作动作</th>
+                    <th>处理结果</th>
+                </tr>
+             </thead>
+             <tbody id="approval_table_content">
+             </tbody>
+           </table>
+            <div class="Paging" id="pagination" style="display: none;"></div>
+        </div>
+
+        <hr />
+
+        <p><span class="label">审批意见：</label><select name="approval_result" id="">
+            <option value="1">同意</option>
+            <option value="2">拒绝</option>
+            </select>
+        </p>
+        <p>
+            <span class="label">审批建议：</span>
+            <textarea  name="approval_Msg"  rows="3" cols="40"></textarea>
+        </p>
+        <p class="button">
+            <button id="cancel" type="button" class="btn-default">取 消</button>
+            <button type="button" id="submit" class="btn-blue">提 交</button>
+        </p>
+
+    </form>
+    </div>
+</body>
+    <script src="static/lib/jquery/1.8/jquery.min.js"></script>
+    <script src="js/systable.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script src="js/util.js"></script>
+    <script type="text/html" id="approval_table_html">
+        <%if(list!=""){ %>	
+        <% for(var i = 0; i < pageym; i++) { %>
+        <% var num = (page-1) * pagenum + i; %>
+        <tr class="relative" data-id="<%=list[num].id%>">
+            <td><%=list[num].create_Date%></td>
+            <td><%=list[num].create_user%></td>
+            <td>
+                <% if(list[num].opration_result==1){%> 
+                    通过
+                    <%} else if(list[num].opration_result==2){%> 
+                        拒绝
+                        <%}else{%>
+                            提交
+                            <%}%>
+             </td>
+             <td><%=list[num].opration_reason%></td>           
+        </tr>
+        <% } %>
+        
+        <% } else{%>
+                <tr><td colspan="8">属性不存在</td></tr>
+            <% } %>
+    </script>
+    <script>
+        let id = getUrlParam('id');
+        let caseId;
+        let authorities=[];
+       
+	  
+        $.ajax({
+                url: '/server/admin/getInfo',
+                type: 'GET',
+                data:{id:id},
+                dataType: 'json',
+                async:false,
+                success: function (data) {
+                   let result=data.data;
+                   console.log(result);
+                   caseId=result.case_Id;
+                   authorities=result.authority_List;
+                   $("#title").append(result.case_Title);
+                   $("#username").val(result.user_Name);
+                   $("#usercode").val(result.user_Code);
+                   $("#dept").val(result.dept);
+                   $("#number").val(result.phone_Number);
+                   $("#email").val(result.email);
+                   $("#date").val(result.create_Date);
+                   $("#apply_Reason").val(result.apply_Reason);
+                }
+            })
+        $.ajax({
+                url: '/server/admin/findAllParameters',
+                type: 'GET',
+                dataType: 'json',
+                success:function(data){
+                    let res=data.data;
+                    console.log(authorities);
+                    res.map(item=>{
+                       if(authorities!=null&&authorities.indexOf(item.parameter_Code)>-1){
+                        $("#authority-list").append("<li data-id='"+item.parameter_Code+"'><input type='checkbox' name='"+item.parameter_Code+"'checked  disabled>"+item.parameter_Name+"</li>");
+   
+                       }else{
+                        $("#authority-list").append("<li data-id='"+item.parameter_Code+"'><input type='checkbox' name='"+item.parameter_Code+"'disabled >"+item.parameter_Name+"</li>");
+                       }
+                        
+					});
+                }
+        })
+
+        let url="/server/admin/findRecords?caseId="+caseId;
+        // tableInit("approval_table","approval_table_content","approval_table_html",url); 
+        new SYSTableSorter({
+            TableName: 'approval_table',
+            curPage: 1,//声明默认显示页数为0
+            btnArea: 'btn-operation',
+            Sequence: [], //排序
+            Callback: function (obj, index, curPage) {//index 方法集合
+                var sysindex = function (callback) {
+                    index.ajaxGet(url, callback); //回调方法get
+                };
+                sysindex(function (listArr) {
+                    //使用json获取数据 
+                    var pageSize = 10;//设置每页显示数量
+                    var total = listArr.data.length//获取数据总数
+                    var pageTotal = Math.ceil(total / pageSize);//获取页码数
+                    var contentname = TAB$('approval_table_content');
+                    var Table = TAB$(index.par.TableName);
+                    var currentPages = curPage * pageSize < total ? pageSize : total - (curPage - 1) * pageSize;//判断页码
+                    var html = template('approval_table_html', {
+                        page: curPage, //当前页数
+                        pagenum: pageSize, //每页显示数量
+                        pageym: currentPages, //当前页码
+                        list: listArr.data,
+                    });
+                    contentname.innerHTML = html;
+                    index.BtnoperationMethod(Table, index); //按钮操作事件方法   
+                    index.pageTableMethod(html, curPage, pageTotal, pageSize, total);//分页功能设置 
+                    //TAB$('tablehtml').remove();
+                });
+                //上面主要通过javascript json模式进行数据操作,同时也可以使用API接口形式进行数据操作
+
+            },//主要指的回调table数据
+           
+
+            
+        });
+
+
+
+         //表单提交的点击事件
+         $("#submit").click(function () {
+                let formAtrr = $("#detail-form").serializeArray();
+                let modal = {};
+                $.each(formAtrr, function (i, field) {
+                    modal[field.name] = field.value;
+                });
+                modal.approval_Date = getNowDate();
+                modal.case_Id=caseId;
+              
+                //获得审批人的id
+                modal.approval_User=sessionStorage.userCode
+                console.log(modal)
+                //获得form表单的dom结构
+                console.log($("#detail-form").get(0));
+
+                // //上传审核节点表单信息
+                $.ajax({
+					url:'/server/admin/postApproval',
+					type:'POST',
+					data:JSON.stringify(modal),
+					contentType: "application/json;charset=UTF-8",
+					success:function(data){
+					  if(data.code==1){
+                            alert("提交成功");
+                            window.location.href="./operation.html"
+                        }
+                        
+                    },
+				    error:function(){
+					    alert("未知错误，请联系管理员")
+				    }
+				})
+
+         })
+
+    </script>
+    <!-- <script>
+        // tableInit("approval_table","approval_table_content","approval_table_html",url); 
+        new SYSTableSorter({
+            TableName: 'approval_table',
+            curPage: 1,//声明默认显示页数为0
+            Sequence: [], //排序
+            Callback: function (obj, index, curPage) {//index 方法集合
+                var sysindex = function (callback) {
+                    index.ajaxGet("/server/admin/findRecords?caseId=38", callback); //回调方法get
+                };
+                sysindex(function (listArr) {
+                    //使用json获取数据 
+                    var pageSize = 10;//设置每页显示数量
+                    var total = listArr.data.length//获取数据总数
+                    var pageTotal = Math.ceil(total / pageSize);//获取页码数
+                    var contentname = TAB$('approval_table_content');
+                    var Table = TAB$(index.par.TableName);
+                    var currentPages = curPage * pageSize < total ? pageSize : total - (curPage - 1) * pageSize;//判断页码
+                    var html = template('approval_table_html', {
+                        page: curPage, //当前页数
+                        pagenum: pageSize, //每页显示数量
+                        pageym: currentPages, //当前页码
+                        list: listArr.data,
+                    });
+                    contentname.innerHTML = html;
+                    index.BtnoperationMethod(Table, index); //按钮操作事件方法   
+                    index.pageTableMethod(html, curPage, pageTotal, pageSize, total);//分页功能设置 
+                    //TAB$('tablehtml').remove();
+                });
+                //上面主要通过javascript json模式进行数据操作,同时也可以使用API接口形式进行数据操作
+
+            },//主要指的回调table数据
+           
+
+            
+        });
+    </script>  -->
+
+
+</html>

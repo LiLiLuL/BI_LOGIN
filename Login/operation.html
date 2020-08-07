@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>用户登录的主要页面</title>
+    <link type="text/css" rel="stylesheet" href="css/table.css" />
+    <link href="./css/iconfont.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- <script src="./static/lib/jquery/1.8/jquery.min.js"></script> -->
+    <script src="./js/sockjs.min.js"></script>
+    <script src="./js/stomp.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/browser.min.js"></script>
+ 
+
+
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <!-- <img src="./images/hearder.jpg" alt="" class="header-img" /> -->
+            <h1>BI经营指标体系仪表板</h1>
+            <ul class="personalOperation">
+                <li id="username"><i class="iconfont icon-gerenxinxi"></i>用户名</li>
+                <li><i class="iconfont icon-xiugaimima01"></i><a href="./changepassword.html">修改密码</a></li>
+                <li id="logout"><i class="iconfont icon-icon-"></i>退出</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="right">
+                <span><li class="iconfont icon-querentixing"></li></span>
+               <ul id="approval-info" class="information"></ul>
+               <div><button>全部通过</button></div>
+               <img src="./images/information.png" alt="" class="info-img" />
+            </div>
+            <div class="left">
+                <div class="menu">
+                    <ul class="theMenu">
+                        <li data-id="user"><i class="iconfont icon-yonghuguanli"></i>用户管理</li>
+                        <li data-id="orgnization"><i class="iconfont icon-icon-test1"></i>组织管理</li>
+                        <li data-id="approval"><i class="iconfont icon-shenpiliuchengguanli"></i>审批流程管理</li>
+                        <li data-id="category"><i class="iconfont icon-shenpiliuchengguanli"></i>分类管理</li>
+                        <li data-id="modify" style="visibility: hidden">用户修改</li>
+                    </ul>
+                </div>
+                <div class="main-content" id="main-content"></div>
+            </div>
+        </div>
+        <p style="text-align: center">&copy;版权所有，侵权必究</p>
+    </div>
+    
+    <script type="text/babel">
+        $(function () {
+            let theMenu=document.getElementsByClassName("theMenu")[0];
+            let liList=theMenu.getElementsByTagName("li");
+            $(".theMenu").on("click", "li", function () {
+                var dataId = $(this).data("id"); //获取data-id的值
+                window.location.hash = dataId; //设置锚点
+                loadInner(dataId);
+                for(let i=0;i<liList.length;i++){
+                    if(dataId==liList[i].getAttribute("data-id")){
+                        $(this).addClass("menuactive");
+                    }else{
+                        liList[i].classList.remove("menuactive")
+                    }
+                }
+            });
+            function loadInner(dataId) {
+                 dataId = window.location.hash;
+                var pathn, i;
+                switch (dataId) {
+                    case "#user":
+                        pathn = "user.html";
+                        i = 0;
+                        break;
+                    case "#orgnization":
+                        pathn = "orgnization.html";
+                        i = 1;
+                        break;
+                    case "#approval":
+                        pathn = "approval.html";
+                        i = 0;
+                        break;
+                    case "#category":
+                        pathn="categoryindex.html";
+                        i=1;
+                        break;
+                    case "#modify":
+                        pathn = "modify.html";
+
+                    default:
+                        pathn = "user.html";
+                        i = 0;
+                        break;
+                }
+                $("#main-content").load(pathn); //加载相对应的内容
+                // if(pathn=='orgnization.html'){
+                //     $("#main-content").load(pathn,function(){
+                //     let sc=document.createElement("script");
+                //     sc.type="text/javascript";
+                //     sc.src="js/organization.js";
+                //     $("body").append(sc);
+                //     }); //加载相对应的内容
+                // }else{
+                //     $("#main-content").load(pathn); //加载相对应的内容
+
+                // }
+                $(".theMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
+            }
+            var dataId = window.location.hash;
+            loadInner(dataId);
+        });
+
+
+        var mask;
+        let config;
+
+        $(function () {
+            $("#username").text(sessionStorage.userCode);
+
+        })
+        $(function () {
+            var socket;
+            if (typeof (WebSocket) == "undefined") {
+                console.log("您的浏览器不支持WebSocket");
+            } else {
+                console.log("您的浏览器支持WebSocket");
+                //实现化WebSocket对象，指定要连接的服务器地址与端口  建立连接  
+                let id=sessionStorage.userCode;
+
+                socket = new WebSocket("ws://172.18.154.126:8013/myserver/topic/"+id);
+                //打开事件  
+                socket.onopen = function () {
+                    console.log("Socket 已打开");
+                    socket.send(id);
+                };
+                //获得消息事件  
+                socket.onmessage = function (msg) {
+                    let data=JSON.parse(msg.data)[id];
+                    if(data.length==0){
+                        $("#approval-info").append("<li>暂无审批信息</li>")
+                    }else{
+                        $("#approval-info").append("<li>您有"+data.length+"条审批信息，请审批</li>")
+                        data.forEach(ele => {
+                        $("#approval-info").append("<li id="+ele.id+" class='choose-info' >->"+ele.case_Title+"时间："+ele.create_Date+"</li>")
+                        
+                        });
+
+                    }
+                    
+                    
+                    //发现消息进入  开始处理前端触发逻辑
+
+                };
+                //关闭事件  
+                socket.onclose = function () {
+                    console.log("Socket已关闭");
+                };
+                //发生了错误事件  
+                socket.onerror = function () {
+                    alert("Socket发生了错误");
+                    //此时可以尝试刷新页面
+                }
+
+                $("#approval-info").click(function(e){
+                    let dom=e.target;
+                    let id=dom.getAttribute("id");
+                    window.location.href="/detail.html?id="+id;
+                })
+
+               
+            }
+
+        })
+        $("#logout").click(()=>{
+            logout();
+        })
+        function logout(){
+            sessionStorage.removeItem('userCode');
+            window.location.href="./login.html";
+        }
+    </script>
+</body>
+
+</html>
